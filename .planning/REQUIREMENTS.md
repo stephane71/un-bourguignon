@@ -9,12 +9,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Foundation
 
-- [ ] **FOND-01**: Static export configured (`output: 'export'`, `images.unoptimized: true`)
-- [ ] **FOND-02**: Tailwind CSS 4 theme tokens defined via `@theme` (palette écru/sable/brun/terre/or/argile)
-- [ ] **FOND-03**: Google Fonts loaded via next/font/google (Lora + Instrument Sans) with CSS variables
-- [ ] **FOND-04**: Dark mode CSS boilerplate stripped from globals.css
+- [x] **FOND-01**: Static export configured (`output: 'export'`, `images.unoptimized: true`)
+- [x] **FOND-02**: Tailwind CSS 4 theme tokens defined via `@theme` (palette écru/sable/brun/terre/or/argile)
+- [x] **FOND-03**: Google Fonts loaded via next/font/google (Lora + Instrument Sans) with CSS variables
+- [x] **FOND-04**: Dark mode CSS boilerplate stripped from globals.css
 - [ ] **FOND-05**: Mobile-first responsive layout with Tailwind breakpoints (base/sm/md/lg/xl)
-- [ ] **FOND-06**: HTML lang attribute set to `fr`
+- [x] **FOND-06**: HTML lang attribute set to `fr`
 
 ### Navigation
 
@@ -146,12 +146,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOND-01 | Phase 1 | Pending |
-| FOND-02 | Phase 1 | Pending |
-| FOND-03 | Phase 1 | Pending |
-| FOND-04 | Phase 1 | Pending |
+| FOND-01 | Phase 1 | Complete |
+| FOND-02 | Phase 1 | Complete |
+| FOND-03 | Phase 1 | Complete |
+| FOND-04 | Phase 1 | Complete |
 | FOND-05 | Phase 1 | Pending |
-| FOND-06 | Phase 1 | Pending |
+| FOND-06 | Phase 1 | Complete |
 | NAV-01 | Phase 2 | Pending |
 | NAV-02 | Phase 2 | Pending |
 | NAV-03 | Phase 2 | Pending |

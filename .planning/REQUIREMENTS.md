@@ -52,16 +52,16 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Méthode
 
-- [ ] **METH-01**: Stepper 3 étapes (Diagnostic terrain, Accompagnement personnalisé, Suivi et autonomie)
-- [ ] **METH-02**: Layout vertical sur mobile, horizontal sur desktop
-- [ ] **METH-03**: Numéros d'étape en Lora Bold, couleur or (#D4A574), 36-48px
-- [ ] **METH-04**: Tableau des formats d'intervention (consultation, mission, atelier, suivi)
-- [ ] **METH-05**: Contenu issu de `presentation_activite.md` section 4
+- [x] **METH-01**: Stepper 3 étapes (Diagnostic terrain, Accompagnement personnalisé, Suivi et autonomie)
+- [x] **METH-02**: Layout vertical sur mobile, horizontal sur desktop
+- [x] **METH-03**: Numéros d'étape en Lora Bold, couleur or (#D4A574), 36-48px
+- [x] **METH-04**: Tableau des formats d'intervention (consultation, mission, atelier, suivi)
+- [x] **METH-05**: Contenu issu de `presentation_activite.md` section 4
 
 ### Bénéfices
 
-- [ ] **BENE-01**: 4 bénéfices concrets avec icône trait fin + titre Lora + texte Instrument Sans
-- [ ] **BENE-02**: Contenu issu de `presentation_activite.md` section 5 (temps, autonomie, interlocuteur, prix juste)
+- [x] **BENE-01**: 4 bénéfices concrets avec icône trait fin + titre Lora + texte Instrument Sans
+- [x] **BENE-02**: Contenu issu de `presentation_activite.md` section 5 (temps, autonomie, interlocuteur, prix juste)
 
 ### Contact
 
@@ -171,13 +171,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SERV-02 | Phase 3 | Complete |
 | SERV-03 | Phase 3 | Complete |
 | SERV-04 | Phase 3 | Complete |
-| METH-01 | Phase 3 | Pending |
-| METH-02 | Phase 3 | Pending |
-| METH-03 | Phase 3 | Pending |
-| METH-04 | Phase 3 | Pending |
-| METH-05 | Phase 3 | Pending |
-| BENE-01 | Phase 3 | Pending |
-| BENE-02 | Phase 3 | Pending |
+| METH-01 | Phase 3 | Complete |
+| METH-02 | Phase 3 | Complete |
+| METH-03 | Phase 3 | Complete |
+| METH-04 | Phase 3 | Complete |
+| METH-05 | Phase 3 | Complete |
+| BENE-01 | Phase 3 | Complete |
+| BENE-02 | Phase 3 | Complete |
 | CONT-01 | Phase 3 | Pending |
 | CONT-02 | Phase 3 | Pending |
 | CONT-03 | Phase 3 | Pending |

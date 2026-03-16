@@ -21,9 +21,11 @@ export function AProposSection() {
           déplace, j&apos;écoute, je m&apos;adapte à la réalité concrète de
           chaque activité.
         </p>
-        <p className="text-base leading-relaxed font-serif italic">
-          La méthode d&apos;un expert, la proximité d&apos;un artisan.
-        </p>
+        <blockquote className="border-l-4 border-or pl-4">
+          <p className="text-base leading-relaxed font-serif italic">
+            La méthode d&apos;un expert,<br />la proximité d&apos;un artisan.
+          </p>
+        </blockquote>
         <p className="text-base leading-relaxed">
           Je travaille avec la rigueur et les outils d&apos;un consultant
           expérimenté, mais je reste accessible, disponible, et profondément

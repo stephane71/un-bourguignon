@@ -36,14 +36,18 @@ export function ContactSection() {
 
         <div className="mt-6 flex items-center justify-center gap-6">
           <a
-            href="https://linkedin.com/in/stephane-maire"
+            href="https://www.linkedin.com/in/stephanemaire71"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="min-h-12 min-w-12 flex items-center justify-center text-brun hover:text-brun/70 transition-colors focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2 rounded-lg"
           >
             <LinkedIn size={24} />
           </a>
           <a
-            href="https://facebook.com/stephane.maire"
+            href="https://www.facebook.com/stephane.maire1"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Facebook"
             className="min-h-12 min-w-12 flex items-center justify-center text-brun hover:text-brun/70 transition-colors focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2 rounded-lg"
           >

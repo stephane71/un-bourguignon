@@ -28,12 +28,13 @@ export function HeroSection() {
           >
             Consultant numérique de proximité
           </p>
-          <p
-            className="font-serif text-xl italic mt-4"
-            style={{ lineHeight: "1.5" }}
-          >
-            La méthode d&apos;un expert, la proximité d&apos;un artisan.
-          </p>
+          <div className="mt-4 flex justify-center lg:justify-start">
+            <blockquote className="border-l-4 border-or pl-4 text-left max-w-[80%]">
+              <p className="font-serif text-xl italic" style={{ lineHeight: "1.5" }}>
+                La méthode d&apos;un expert,<br />la proximité d&apos;un artisan.
+              </p>
+            </blockquote>
+          </div>
           <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mt-8">
             <Button as="a" href="#contact">
               Prendre contact

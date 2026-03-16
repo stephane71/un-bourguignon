@@ -16,9 +16,28 @@ const instrumentSans = Instrument_Sans({
   variable: "--font-instrument",
 });
 
+const siteTitle = "Stéphane Maire — Consultant numérique de proximité";
+const siteDescription =
+  "Consultant numérique indépendant pour artisans, commerçants et petits entrepreneurs. Facturation électronique, outils de gestion, présence en ligne, formation IA et création d'outils sur mesure. Accompagnement personnalisé sur le terrain.";
+const siteUrl = "https://un-bourguignon.com";
+
 export const metadata: Metadata = {
-  title: "Un Bourguignon",
-  description: "Site vitrine professionnel",
+  title: siteTitle,
+  description: siteDescription,
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: "Stéphane Maire",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({

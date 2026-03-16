@@ -11,10 +11,10 @@ export function ServicesSection() {
           <p className="mt-2 text-base leading-relaxed">
             Mise en conformité et prise en main des outils de facturation adaptés à votre activité.
           </p>
-          <ul className="mt-3 space-y-1 text-base leading-relaxed">
-            <li>— Accompagnement à la mise en conformité</li>
-            <li>— Sélection et prise en main d'un logiciel adapté</li>
-            <li>— Formation à l'émission et à la réception des factures électroniques</li>
+          <ul className="mt-3 space-y-1 text-base leading-relaxed list-disc list-inside marker:text-or">
+            <li>Accompagnement à la mise en conformité</li>
+            <li>Sélection et prise en main d'un logiciel adapté</li>
+            <li>Formation à l'émission et à la réception des factures électroniques</li>
           </ul>
         </Card>
         <Card variant="on-ecru" className="border-t-3 border-or">
@@ -22,10 +22,10 @@ export function ServicesSection() {
           <p className="mt-2 text-base leading-relaxed">
             Des outils simples et efficaces pour organiser votre gestion au quotidien.
           </p>
-          <ul className="mt-3 space-y-1 text-base leading-relaxed">
-            <li>— Diagnostic des besoins et recommandation d'outils simples</li>
-            <li>— Mise en place d'un système de suivi clients et devis</li>
-            <li>— Formation sur mesure aux outils sélectionnés</li>
+          <ul className="mt-3 space-y-1 text-base leading-relaxed list-disc list-inside marker:text-or">
+            <li>Diagnostic des besoins et recommandation d'outils simples</li>
+            <li>Mise en place d'un système de suivi clients et devis</li>
+            <li>Formation sur mesure aux outils sélectionnés</li>
           </ul>
         </Card>
         <Card variant="on-ecru" className="border-t-3 border-or">
@@ -33,10 +33,10 @@ export function ServicesSection() {
           <p className="mt-2 text-base leading-relaxed">
             Gagnez en visibilité auprès de vos clients locaux grâce aux bons outils.
           </p>
-          <ul className="mt-3 space-y-1 text-base leading-relaxed">
-            <li>— Création et optimisation du profil Google Business</li>
-            <li>— Accompagnement sur les réseaux sociaux professionnels (Facebook, LinkedIn)</li>
-            <li>— Stratégie de visibilité locale adaptée aux petites structures</li>
+          <ul className="mt-3 space-y-1 text-base leading-relaxed list-disc list-inside marker:text-or">
+            <li>Création et optimisation du profil Google Business</li>
+            <li>Accompagnement sur les réseaux sociaux professionnels (Facebook, LinkedIn)</li>
+            <li>Stratégie de visibilité locale adaptée aux petites structures</li>
           </ul>
         </Card>
         <Card variant="on-ecru" className="border-t-3 border-or">
@@ -44,10 +44,10 @@ export function ServicesSection() {
           <p className="mt-2 text-base leading-relaxed">
             Découvrez comment l'IA peut simplifier vos tâches administratives courantes.
           </p>
-          <ul className="mt-3 space-y-1 text-base leading-relaxed">
-            <li>— Initiation aux outils IA accessibles (rédaction, traduction, images)</li>
-            <li>— Applications concrètes pour les tâches administratives courantes</li>
-            <li>— Ateliers en petit groupe ou accompagnement individuel</li>
+          <ul className="mt-3 space-y-1 text-base leading-relaxed list-disc list-inside marker:text-or">
+            <li>Initiation aux outils IA accessibles (rédaction, traduction, images)</li>
+            <li>Applications concrètes pour les tâches administratives courantes</li>
+            <li>Ateliers en petit groupe ou accompagnement individuel</li>
           </ul>
         </Card>
         <Card variant="on-ecru" className="border-t-3 border-or">
@@ -55,10 +55,10 @@ export function ServicesSection() {
           <p className="mt-2 text-base leading-relaxed">
             Des outils sur mesure pour automatiser et simplifier votre quotidien professionnel.
           </p>
-          <ul className="mt-3 space-y-1 text-base leading-relaxed">
-            <li>— Tableaux de bord simples adaptés à l'activité</li>
-            <li>— Bases de données prospects et clients</li>
-            <li>— Automatisation pour réduire les tâches répétitives</li>
+          <ul className="mt-3 space-y-1 text-base leading-relaxed list-disc list-inside marker:text-or">
+            <li>Tableaux de bord simples adaptés à l'activité</li>
+            <li>Bases de données prospects et clients</li>
+            <li>Automatisation pour réduire les tâches répétitives</li>
           </ul>
         </Card>
       </div>

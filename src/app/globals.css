@@ -39,6 +39,47 @@ html {
   html {
     scroll-behavior: auto;
   }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  section {
+    background: transparent !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    break-inside: avoid;
+  }
+
+  a[href^="tel:"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.875rem;
+    color: #555;
+  }
+
+  #contact {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+  }
 }
 
 section[id] {

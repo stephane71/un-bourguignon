@@ -54,7 +54,7 @@ export function MethodeSection() {
             key={i}
             className="flex-1 relative lg:px-6 first:lg:pl-0 last:lg:pr-0"
           >
-            <span className="font-serif font-bold text-or-light text-4xl lg:text-5xl">
+            <span className="font-serif font-bold text-argile text-4xl lg:text-5xl">
               {i + 1}
             </span>
             <h3 className="font-serif text-xl font-bold mt-2">{step.title}</h3>

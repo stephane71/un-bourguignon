@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Lora, Instrument_Sans } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -26,7 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${lora.variable} ${instrumentSans.variable}`}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

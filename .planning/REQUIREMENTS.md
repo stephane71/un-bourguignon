@@ -95,10 +95,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Performance
 
-- [ ] **PERF-01**: Lighthouse Performance ≥ 90
-- [ ] **PERF-02**: Lighthouse Accessibilité ≥ 90
-- [ ] **PERF-03**: Lighthouse SEO ≥ 95
-- [ ] **PERF-04**: LCP mobile 4G < 2.5s
+- [x] **PERF-01**: Lighthouse Performance ≥ 90
+- [x] **PERF-02**: Lighthouse Accessibilité ≥ 90
+- [x] **PERF-03**: Lighthouse SEO ≥ 95
+- [x] **PERF-04**: LCP mobile 4G < 2.5s
 - [x] **PERF-05**: Images optimisées WebP, portrait < 100KB
 
 ### Polish
@@ -196,10 +196,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | A11Y-03 | Phase 2 | Complete |
 | A11Y-04 | Phase 3 | Complete |
 | A11Y-05 | Phase 4 | Complete |
-| PERF-01 | Phase 4 | Pending |
-| PERF-02 | Phase 4 | Pending |
-| PERF-03 | Phase 4 | Pending |
-| PERF-04 | Phase 4 | Pending |
+| PERF-01 | Phase 4 | Complete |
+| PERF-02 | Phase 4 | Complete |
+| PERF-03 | Phase 4 | Complete |
+| PERF-04 | Phase 4 | Complete |
 | PERF-05 | Phase 4 | Complete |
 | POLI-01 | Phase 4 | Complete |
 | POLI-02 | Phase 4 | Complete |

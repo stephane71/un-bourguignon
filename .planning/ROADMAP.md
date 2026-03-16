@@ -78,11 +78,12 @@ Plans:
   3. JSON-LD LocalBusiness structured data passes the Google Rich Results Test
   4. Lighthouse scores on mobile: Performance >= 90, Accessibility >= 90, SEO >= 95
   5. Printing the page shows content with contact details visible and navigation/footer hidden
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md — SEO metadata, JSON-LD LocalBusiness, favicon, WebP portrait optimization
+- [ ] 04-02-PLAN.md — Mentions legales page, print stylesheet, accessibility (contrast + reduced-motion)
+- [ ] 04-03-PLAN.md — Build verification, smoke tests, and Lighthouse audit
 
 ## Progress
 
@@ -94,4 +95,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation & Design System | 0/2 | Planning complete | - |
 | 2. Layout Shell | 2/2 | Complete   | 2026-03-16 |
 | 3. Content Sections | 0/4 | Planning complete | - |
-| 4. SEO, Legal & Polish | 0/TBD | Not started | - |
+| 4. SEO, Legal & Polish | 0/3 | Planning complete | - |

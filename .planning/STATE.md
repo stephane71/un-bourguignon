@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: Completed 04-02-PLAN.md
-last_updated: "2026-03-16T19:33:22.764Z"
+status: Legal page, print stylesheet, and accessibility fixes deployed
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-16T19:34:29.343Z"
 last_activity: 2026-03-16 -- Plan 04-02 executed (Legal, Print & Accessibility)
 progress:
   total_phases: 4
   completed_phases: 3
   total_plans: 11
-  completed_plans: 9
+  completed_plans: 10
   percent: 82
 ---
 
@@ -54,6 +54,7 @@ Progress: [████████░░] 82% (9/11 plans complete)
 *Updated after each plan completion*
 | Phase 03-content-sections P04 | 2 | 2 tasks | 2 files |
 | Phase 04-seo-legal-polish P02 | 1 | 2 tasks | 3 files |
+| Phase 04-seo-legal-polish P01 | 2 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,9 @@ Recent decisions affecting current work:
 - [Phase 03-content-sections]: Fragment wrapper in page.tsx since layout.tsx already provides main element
 - [Phase 04-seo-legal-polish]: Step number color changed from or-light to argile for WCAG AA large text compliance (3.69:1)
 - [Phase 04-seo-legal-polish]: Legal page uses dl/dt/dd semantic markup and Container directly (not Section component)
+- [Phase 04-seo-legal-polish]: JSON-LD injected as script tag in body before Header per Next.js guidance
+- [Phase 04-seo-legal-polish]: Favicon.ico uses PNG format in .ico container (universal browser support)
+- [Phase 04-seo-legal-polish]: Portrait served as WebP directly without picture fallback (universal support)
 
 ### Pending Todos
 
@@ -91,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T19:33:22.762Z
-Stopped at: Completed 04-02-PLAN.md
+Last session: 2026-03-16T19:34:29.341Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None

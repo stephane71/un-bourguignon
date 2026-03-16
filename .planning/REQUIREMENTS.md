@@ -78,11 +78,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### SEO & Legal
 
-- [ ] **SEO-01**: Meta title "Stéphane Maire — Consultant numérique de proximité | Saône-et-Loire"
-- [ ] **SEO-02**: Meta description avec mots-clés locaux et numéro de téléphone
-- [ ] **SEO-03**: Open Graph tags (title, description, locale fr_FR, type website)
-- [ ] **SEO-04**: JSON-LD LocalBusiness (name, jobTitle, telephone, email, address, sameAs)
-- [ ] **SEO-05**: Semantic HTML avec hiérarchie H1 > H2 > H3 correcte
+- [x] **SEO-01**: Meta title "Stéphane Maire — Consultant numérique de proximité | Saône-et-Loire"
+- [x] **SEO-02**: Meta description avec mots-clés locaux et numéro de téléphone
+- [x] **SEO-03**: Open Graph tags (title, description, locale fr_FR, type website)
+- [x] **SEO-04**: JSON-LD LocalBusiness (name, jobTitle, telephone, email, address, sameAs)
+- [x] **SEO-05**: Semantic HTML avec hiérarchie H1 > H2 > H3 correcte
 - [x] **SEO-06**: Page mentions légales `/mentions-legales` (nom, forme juridique, adresse, email, SIRET, hébergeur)
 
 ### Accessibilité
@@ -99,12 +99,12 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **PERF-02**: Lighthouse Accessibilité ≥ 90
 - [ ] **PERF-03**: Lighthouse SEO ≥ 95
 - [ ] **PERF-04**: LCP mobile 4G < 2.5s
-- [ ] **PERF-05**: Images optimisées WebP, portrait < 100KB
+- [x] **PERF-05**: Images optimisées WebP, portrait < 100KB
 
 ### Polish
 
 - [x] **POLI-01**: Print-friendly stylesheet (@media print : masquer nav/footer, afficher coordonnées)
-- [ ] **POLI-02**: Favicon initiales "SM" dans la palette Artisan Numérique
+- [x] **POLI-02**: Favicon initiales "SM" dans la palette Artisan Numérique
 
 ## v2 Requirements
 
@@ -185,11 +185,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-05 | Phase 3 | Complete |
 | FOOT-01 | Phase 2 | Complete |
 | FOOT-02 | Phase 2 | Complete |
-| SEO-01 | Phase 4 | Pending |
-| SEO-02 | Phase 4 | Pending |
-| SEO-03 | Phase 4 | Pending |
-| SEO-04 | Phase 4 | Pending |
-| SEO-05 | Phase 4 | Pending |
+| SEO-01 | Phase 4 | Complete |
+| SEO-02 | Phase 4 | Complete |
+| SEO-03 | Phase 4 | Complete |
+| SEO-04 | Phase 4 | Complete |
+| SEO-05 | Phase 4 | Complete |
 | SEO-06 | Phase 4 | Complete |
 | A11Y-01 | Phase 4 | Complete |
 | A11Y-02 | Phase 2 | Complete |
@@ -200,9 +200,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERF-02 | Phase 4 | Pending |
 | PERF-03 | Phase 4 | Pending |
 | PERF-04 | Phase 4 | Pending |
-| PERF-05 | Phase 4 | Pending |
+| PERF-05 | Phase 4 | Complete |
 | POLI-01 | Phase 4 | Complete |
-| POLI-02 | Phase 4 | Pending |
+| POLI-02 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 57 total

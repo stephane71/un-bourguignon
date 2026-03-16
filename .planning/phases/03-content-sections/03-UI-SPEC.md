@@ -38,11 +38,10 @@ Declared values (must be multiples of 4):
 | xl | 32px | Stepper step gaps, inter-block spacing within sections |
 | 2xl | 48px | Section heading to content gap |
 | 3xl | 64px | Section vertical padding on mobile (`py-16`) |
-| 4xl | 80px | Section vertical padding on desktop (`py-20`) |
-| 5xl | 96px | Section vertical padding on large screens (`py-24`) |
 
 Exceptions:
-- Hero section: `py-20 sm:py-28 lg:py-32` (taller padding than standard sections for landing-area feel)
+- Hero section: `py-20 sm:py-28 lg:py-32` (taller padding than standard sections for landing-area feel -- values exceed 3xl but are justified as one-off hero treatment, not reusable tokens)
+- Standard sections use responsive padding from the scale: `py-16 lg:py-20` maps to 64px mobile, progressing via Tailwind responsive utilities
 - Portrait image: 200px (mobile) / 280px (desktop) -- fixed dimensions, not spacing-scale values
 - Min tap target: 48px on all interactive elements (phone, email, CTAs, social links)
 
@@ -50,19 +49,32 @@ Exceptions:
 
 ## Typography
 
+4 base font sizes, 2 weights. Responsive breakpoint variants use the same 4 base sizes at different breakpoints.
+
 | Role | Font | Size | Weight | Line Height | Usage |
 |------|------|------|--------|-------------|-------|
 | Body | Instrument Sans | 16px (`text-base`) | 400 (regular) | 1.6 (`leading-relaxed`) | Paragraph text, card descriptions, sub-prestations lists |
-| Label | Instrument Sans | 14px (`text-sm`) | 600 (semibold) | 1.5 (`leading-snug`) | Table headers, format labels, small annotations |
-| Section Heading | Lora | 28px mobile / 36px desktop (`text-3xl lg:text-4xl`) | 700 (bold) | 1.2 | H2 section titles (A propos, Pour qui, Services, etc.) |
-| Hero Name | Lora | 36px mobile / 48px desktop (`text-4xl lg:text-5xl`) | 700 (bold) | 1.1 | H1 "Stephane Maire" |
-| Hero Subtitle | Instrument Sans | 20px mobile / 24px desktop (`text-xl lg:text-2xl`) | 400 (regular) | 1.4 | "Consultant numerique de proximite" |
-| Hero Slogan | Lora | 18px mobile / 20px desktop (`text-lg lg:text-xl`) | 400 italic | 1.5 | "La methode d'un expert, la proximite d'un artisan." |
-| Card Title | Lora | 20px (`text-xl`) | 600 (semibold) | 1.3 | Card headings (Pour qui problems, Service names, Benefice names) |
-| Step Number | Lora | 36px mobile / 48px desktop (`text-4xl lg:text-5xl`) | 700 (bold) | 1.0 | Methode stepper numbers (1, 2, 3) in gold |
-| Step Title | Lora | 20px (`text-xl`) | 600 (semibold) | 1.3 | Step names (Diagnostic terrain, etc.) |
+| Label | Instrument Sans | 14px (`text-sm`) | 700 (bold) | 1.5 (`leading-snug`) | Table headers, format labels, small annotations |
+| Heading | Lora | 20px (`text-xl`) | 700 (bold) | 1.3 | Card titles, step titles, benefit titles (H3 level) |
+| Display | Lora | 36px (`text-4xl`) | 700 (bold) | 1.2 | Section H2 titles, Hero H1 name, step numbers |
 
-Weights used: 400 (regular), 600 (semibold), 700 (bold) -- Lora loads variable weight via next/font/google.
+Base size scale: 14px, 16px, 20px, 36px.
+Weight scale: 400 (regular), 700 (bold).
+
+### Role-to-class mapping
+
+| Role | Mobile | Desktop (lg+) | Notes |
+|------|--------|---------------|-------|
+| Hero H1 (name) | `text-4xl` (36px) | `text-5xl` (48px) | 48px is responsive variant of Display, line-height 1.1 |
+| Hero subtitle | `text-xl` (20px) | `text-2xl` (24px) | Uses Heading size, Instrument Sans 400, line-height 1.4 |
+| Hero slogan | `text-xl` (20px) | `text-xl` (20px) | Uses Heading size, Lora 400 italic, line-height 1.5 |
+| Section H2 | `text-xl` (20px) | `text-4xl` (36px) | Scales from Heading to Display at lg breakpoint |
+| Card/Step title | `text-xl` (20px) | `text-xl` (20px) | Heading size, Lora 700 |
+| Step number | `text-4xl` (36px) | `text-5xl` (48px) | Display size, Lora 700, color or-light #D4A574 |
+| Body text | `text-base` (16px) | `text-base` (16px) | Instrument Sans 400 |
+| Label text | `text-sm` (14px) | `text-sm` (14px) | Instrument Sans 700 |
+
+Responsive variants (24px at `text-2xl`, 48px at `text-5xl`) are Tailwind breakpoint scaling of the 4 base sizes, not additional size declarations.
 
 ---
 
@@ -154,7 +166,7 @@ All are Server Components (no `use client`). Content is hardcoded from `content/
 - **Mobile (< lg):** Portrait circle centered (200px, `rounded-full overflow-hidden`), then text block centered below. Stack order: portrait, name (H1), subtitle, slogan (italic), CTAs.
 - **Desktop (lg+):** Two-column layout. Left: text block (name H1, subtitle, slogan, CTAs) -- left-aligned. Right: portrait circle (280px). Vertically centered.
 - **Portrait:** `next/image` with `width={280} height={280}`, `rounded-full`, `src="/images/photo-portrait.png"`, `alt="Stephane Maire, consultant numerique"`, `priority` attribute for LCP.
-- **CTA row:** "Prendre contact" as `<Button as="a" href="#contact" variant="primary">`, "Decouvrir mes services" as a plain text link with right arrow (`→`), `font-sans font-semibold text-brun underline-offset-4 hover:underline`.
+- **CTA row:** "Prendre contact" as `<Button as="a" href="#contact" variant="primary">`, "Decouvrir mes services" as a plain text link with right arrow (`→`), `font-sans font-bold text-brun underline-offset-4 hover:underline`.
 - **Extra padding:** `py-20 sm:py-28 lg:py-32` instead of standard Section padding.
 
 ### A propos (AProposSection)
@@ -167,7 +179,7 @@ All are Server Components (no `use client`). Content is hardcoded from `content/
 
 - H2 section title + intro paragraph.
 - 4 problem cards in grid: `grid grid-cols-1 md:grid-cols-2 gap-6`.
-- Each card uses `<Card variant="on-white">` with H3 title (Lora semibold) + description paragraph (Instrument Sans regular).
+- Each card uses `<Card variant="on-white">` with H3 title (Lora bold) + description paragraph (Instrument Sans regular).
 - No icons on cards -- text-only per decision.
 
 ### Services (ServicesSection)
@@ -175,25 +187,25 @@ All are Server Components (no `use client`). Content is hardcoded from `content/
 - H2 section title + intro paragraph.
 - 5 service cards in grid: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`.
 - Each card uses `<Card variant="on-ecru">` (section background is ecru) with a gold/argile top border: `border-t-3 border-or` (or `border-argile`).
-- Card content: H3 title (Lora semibold), description paragraph, then `<ul>` bullet list of sub-prestations.
+- Card content: H3 title (Lora bold), description paragraph, then `<ul>` bullet list of sub-prestations.
 - At 3-column breakpoint, cards 4 and 5 left-aligned (natural grid flow, empty cell on right).
 
 ### Methode (MethodeSection)
 
 - H2 section title.
 - **Stepper sub-block:** 3 steps.
-  - Mobile: vertical stack. Each step: step number (Lora Bold, or-light `#D4A574`, `text-4xl`) + step title (Lora semibold) + description paragraph. Connector: vertical line segment between steps (`border-l-2 border-sable` or similar).
+  - Mobile: vertical stack. Each step: step number (Lora Bold, or-light `#D4A574`, `text-4xl`) + step title (Lora bold) + description paragraph. Connector: vertical line segment between steps (`border-l-2 border-sable` or similar).
   - Desktop (lg+): horizontal 3-column layout. Each step: number on top, title, description below. Connector: horizontal line between step columns (`border-t-2 border-sable` connecting the steps).
 - **Formats table sub-block:** Spaced below stepper (`mt-12 lg:mt-16`).
   - Standard HTML `<table>` with 3 columns: Format, Duree, Ideal pour.
-  - Table styling: `w-full text-left`, header row in `font-serif font-semibold`, rows separated by `border-b border-sable`, cell padding `py-3 px-4`.
+  - Table styling: `w-full text-left`, header row in `font-serif font-bold`, rows separated by `border-b border-sable`, cell padding `py-3 px-4`.
   - Responsive: table inside a `overflow-x-auto` wrapper for small screens.
 
 ### Benefices (BeneficesSection)
 
 - H2 section title.
 - 4 benefit items in grid: `grid grid-cols-1 md:grid-cols-2 gap-8`.
-- Each item: thin-line SVG icon (32px, `text-brun`) + H3 title (Lora semibold) + description paragraph (Instrument Sans regular).
+- Each item: thin-line SVG icon (32px, `text-brun`) + H3 title (Lora bold) + description paragraph (Instrument Sans regular).
 - Icon positioned above title (stacked layout within each grid cell).
 
 ### Contact (ContactSection)

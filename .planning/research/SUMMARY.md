@@ -1,0 +1,176 @@
+# Project Research Summary
+
+**Project:** Site Vitrine -- Stephane Maire EI
+**Domain:** One-page static showcase site (site vitrine) for a local digital consultant
+**Researched:** 2026-03-16
+**Confidence:** HIGH (stack, architecture) / MEDIUM (features, pitfalls)
+
+## Executive Summary
+
+This project is a one-page static showcase site targeting non-tech-savvy micro-entrepreneurs and artisans in Saone-et-Loire, primarily on mobile devices. The research strongly recommends a pure static export approach (Next.js `output: 'export'`) deployed to Vercel, with a flat section-based architecture where each section is a Server Component and client-side JavaScript is limited to three interactive behaviors: the mobile burger menu, the back-to-top button, and scroll position detection. The entire site requires only two runtime dependencies beyond the existing stack: `lucide-react` for icons and optionally `schema-dts` (dev-only) for typed JSON-LD. There is no need for a backend, API routes, a contact form, or any third-party service.
+
+The recommended approach prioritizes trust signals and conversion for a rural local audience: a prominent clickable phone number (the primary CTA), professional portrait, clear value proposition above the fold, and a warm "Artisan Numerique" visual identity using Lora serif + Instrument Sans with an ecru/sable/brun palette. The content follows a proven AIDA narrative: Hero, Pour qui (empathy), Services, Methode (transparency), Benefices (outcomes), Contact. Testimonials, a blog, analytics, and a contact form are explicitly anti-features for this use case and audience.
+
+The main risk is the static export constraint: `next dev` masks server-side incompatibilities that only surface at `next build`. The critical mitigation is to configure `output: 'export'` and `images: { unoptimized: true }` in `next.config.ts` as the very first task, before any component work begins. A secondary risk is the Tailwind CSS 4 configuration model, which is fundamentally different from v3 -- custom tokens must be defined in `globals.css` using `@theme`, not in `tailwind.config.ts`. The existing boilerplate dark mode CSS must also be removed immediately to protect the warm palette.
+
+## Key Findings
+
+### Recommended Stack
+
+The existing stack (Next.js 16.1.6, React 19.2.4, TypeScript 5.9.3, Tailwind CSS 4.2.1) is already ideal for this project and requires no changes. The only required additions are two configuration changes to `next.config.ts` (static export + unoptimized images) and one new package (`lucide-react` for icons). All other capabilities -- font loading, SEO metadata, image handling, structured data, accessibility -- are built into the existing stack.
+
+**Core technologies:**
+- `output: 'export'` in next.config.ts: Static HTML/CSS/JS generation -- eliminates server requirement, Vercel auto-detects
+- `next/font/google` (built-in): Self-host Lora + Instrument Sans at build time -- no external requests, no CLS, privacy-compliant
+- Next.js Metadata API (built-in): Type-safe SEO metadata, Open Graph, robots -- replaces any third-party SEO library
+- `next/image` with `unoptimized: true` (built-in): LCP prevention and lazy loading with pre-converted WebP files
+- JSON-LD via `<script>` tag (built-in): LocalBusiness structured data for Google local results
+- Lucide React: Tree-shakeable thin-line SVG icons -- matches "trait fin" design spec
+- CSS `scroll-behavior: smooth` + `IntersectionObserver` (built-in): Scroll animations and anchor navigation with zero JS dependencies
+
+**Do NOT add:** Framer Motion, GSAP, AOS, next-seo, react-icons, analytics libraries, form handling services.
+
+### Expected Features
+
+**Must have (table stakes):**
+- Sticky header with anchor navigation (burger on mobile, inline on desktop)
+- Hero section: value proposition + portrait + 2 CTAs visible above fold
+- Clickable `tel:` phone number as the primary conversion element
+- Contact section with email, social links, and all coordinates grouped
+- SEO metadata: title, description, Open Graph tags in French
+- JSON-LD LocalBusiness schema with geo coordinates, service area, contact details
+- `lang="fr"` on `<html>`, semantic heading hierarchy (single h1, h2 per section)
+- WCAG AA contrast compliance (4.5:1 minimum), 48px touch targets, keyboard navigation
+- `/mentions-legales` route (legal requirement under French LCEN)
+- Static export with pre-optimized WebP images (LCP < 2.5s on mobile 4G)
+
+**Should have (differentiators):**
+- "Pour qui" problem-card section: 4 real pain points creating audience recognition
+- 3-step method visualization: transparency that reduces anxiety about hiring a consultant
+- Benefits section framed around client outcomes ("what you get") rather than service features
+- "Artisan Numerique" visual identity: Lora serif headings + Instrument Sans body + ecru/sable/brun palette
+- Scroll-triggered section reveals (CSS + IntersectionObserver, zero JS library)
+- `sitemap.xml` and `robots.txt` generated by Next.js App Router file conventions
+- Print stylesheet for non-tech users
+- Custom "SM" favicon in the warm palette
+- Local SEO signals: service area mentions in content and in `areaServed` JSON-LD field
+
+**Defer (v2+):**
+- Testimonials -- only once genuine ones exist; placeholder testimonials destroy trust
+- Online booking -- audience prefers calling; contact form breaks static export constraint
+- Blog -- requires content creation that diverts from client work
+
+### Architecture Approach
+
+The architecture is deliberately minimal: a single `page.tsx` that composes 7 section components in reading order, each a Server Component importing its content slice from a central typed `data.ts` module. Only 2 components require `'use client'`: `MobileNav` (burger menu open/close state) and `BackToTop` (scroll position listener). There is no prop drilling, no Context, no state management library. The entire application has exactly 2 pieces of runtime state.
+
+**Major components:**
+1. `RootLayout` (layout.tsx) -- HTML shell, font CSS variables, global metadata, JSON-LD script tag
+2. `Header` + `MobileNav` -- fixed navigation with anchor links; MobileNav is the only client island in the shell
+3. Section components (Hero, About, Audience, Services, Method, Benefits, Contact) -- Server Components, each imports from `data.ts`
+4. `SectionWrapper` -- thin wrapper providing consistent `id`, padding, and max-width for every section
+5. `data.ts` -- single source of truth for all text content, typed with TypeScript interfaces
+6. `src/app/mentions-legales/page.tsx` -- separate route, reuses layout/header/footer
+
+### Critical Pitfalls
+
+1. **Static export configured too late** -- Add `output: 'export'` and `images: { unoptimized: true }` to `next.config.ts` as the very first commit. Running `next dev` masks incompatibilities; they only surface at `next build`. Run `npm run build` after every structural change.
+
+2. **Tailwind CSS 4 configuration in wrong format** -- Do NOT create `tailwind.config.ts`. All custom tokens (colors, fonts) must be defined in `globals.css` using `@theme { ... }`. Stale v3 config files are silently ignored; custom classes will appear to work in dev but apply nothing.
+
+3. **Dark mode boilerplate overriding the palette** -- The scaffolded `globals.css` includes `prefers-color-scheme: dark` rules that set a black background. This affects 30-40% of mobile users. Strip this boilerplate entirely before implementing the design system.
+
+4. **Burger menu accessibility failures** -- The `MobileNav` client component needs `aria-expanded`, `aria-controls`, Escape key handler, and focus management (focus first link on open, return focus on close). Missing this fails Lighthouse Accessibility and RGAA compliance (French law).
+
+5. **`'use client'` overuse inflating JS bundle** -- Section components must never have `'use client'`. Extract only the burger toggle and scroll button as client islands. If the JS bundle exceeds ~100KB on a static showcase site, audit for unnecessary client directives.
+
+## Implications for Roadmap
+
+Based on research, the architecture's explicit dependency layers map directly to a 4-phase build order:
+
+### Phase 1: Foundation & Design System
+**Rationale:** All configuration errors and design token decisions must be locked before any component work. The static export constraint and Tailwind CSS 4 config model are the two most common sources of late-discovery rework.
+**Delivers:** A buildable project with correct config, design tokens, font setup, and UI primitives.
+**Addresses:** Static export requirement, font loading, color palette, touch target enforcement.
+**Avoids:** Pitfalls 1 (image/export config), 2 (output: export), 3 (dark mode boilerplate), 4 (Tailwind v4 config), 7 (font FOUT), 13 (contrast failures on earth tones).
+**Tasks:** `next.config.ts` export config, strip `globals.css` boilerplate, define `@theme` color tokens, setup `fonts.ts` + CSS variables, create `SectionWrapper` / `Button` / `Card` / `Icon` primitives, scaffold `data.ts` with placeholder content.
+
+### Phase 2: Layout Shell
+**Rationale:** Header and Footer wrap all sections; they must exist before sections can be integrated and tested in context.
+**Delivers:** Fixed header with anchor navigation (desktop + mobile), footer, back-to-top button, root layout with metadata and JSON-LD.
+**Addresses:** Mobile navigation, anchor scroll offset, back-to-top behavior.
+**Avoids:** Pitfall 5 (scroll offset by header), Pitfall 6 (burger menu accessibility), Pitfall 14 ('use client' overuse).
+**Uses:** `MobileNav` as isolated client island, `scroll-margin-top` CSS pattern, ARIA attributes.
+
+### Phase 3: Content Sections
+**Rationale:** All sections depend on Phase 1 primitives and Phase 2 layout integration. Build in narrative order to test the full user flow early.
+**Delivers:** Complete one-page content: Hero, About, Audience (Pour qui), Services, Methode, Benefices, Contact.
+**Addresses:** All table-stakes and differentiator features from FEATURES.md.
+**Avoids:** Pitfall 8 (48px tap targets on phone/email links), Pitfall 10 (portrait image size), Pitfall 12 (responsive grid breakpoints), Pitfall 15 (tel: link formatting).
+**Notes:** Hero must use `priority` prop on portrait for LCP. Contact section phone link must use E.164 format in `href`, French display format visually. Service cards (5 items, odd number) need explicit grid orphan handling at lg breakpoint.
+
+### Phase 4: SEO, Legal & Polish
+**Rationale:** SEO metadata and legal page can only be finalized once content is stable. Polish (scroll reveals, OG image, Lighthouse fixes) is last because it requires all sections to have final content.
+**Delivers:** Full SEO metadata, JSON-LD LocalBusiness, `/mentions-legales` page, scroll animations, favicon, OG image, print stylesheet, Lighthouse >= 90 on mobile.
+**Addresses:** JSON-LD structured data, Open Graph, sitemap/robots.txt, WCAG AA audit, reduced motion support.
+**Avoids:** Pitfall 9 (single-page SEO gaps -- requires semantic heading hierarchy, JSON-LD, geo meta tags).
+
+### Phase Ordering Rationale
+
+- Foundation before everything: static export config and Tailwind CSS 4 tokens are silent-failure traps that cascade into all later work. Lock them in Phase 1.
+- Layout before sections: header height determines `scroll-margin-top` values; sections cannot be integration-tested without the shell.
+- Content before polish: scroll animation timing and OG image design require final copy and section structure to be stable.
+- SEO and legal last: JSON-LD data (phone, address, service area) must be confirmed before being committed to structured data.
+
+### Research Flags
+
+Phases with standard, well-documented patterns (skip research-phase):
+- **Phase 1 (Foundation):** Next.js static export config and Tailwind CSS 4 `@theme` are fully documented. No research needed -- follow STACK.md patterns exactly.
+- **Phase 2 (Layout):** Server/Client component split for header is a documented Next.js App Router pattern. ARIA burger menu follows WAI-ARIA disclosure pattern.
+- **Phase 3 (Sections):** Card grids, portrait handling, clickable links are standard patterns. Content is defined in PROJECT.md.
+- **Phase 4 (SEO):** JSON-LD LocalBusiness schema and Next.js Metadata API are thoroughly documented. No research needed.
+
+No phase requires `/gsd:research-phase` during planning. All patterns are sufficiently detailed in the research files to implement directly.
+
+## Confidence Assessment
+
+| Area | Confidence | Notes |
+|------|------------|-------|
+| Stack | HIGH | Core additions (static export config, next/font, Metadata API, next/image) verified against official Next.js 16.1.6 docs (2026-02-27). Only Lucide React and schema-dts exact versions are LOW (not verified via npm registry). |
+| Features | MEDIUM | Derived from domain expertise and PROJECT.md requirements. Web search unavailable during research. French legal requirements (LCEN, RGAA) and JSON-LD LocalBusiness are well-established standards. |
+| Architecture | HIGH | Patterns are direct applications of official Next.js App Router documentation (Server/Client boundary, App Router file conventions). CSS scroll patterns are web standards. |
+| Pitfalls | MEDIUM | Training data; Tailwind CSS 4 migration behavior and next/image static export behavior are well-documented. WCAG AA and WAI-ARIA specs are HIGH confidence (stable). |
+
+**Overall confidence:** HIGH for implementation approach. MEDIUM for content decisions (service descriptions, exact copy, palette values) which depend on input from Stephane.
+
+### Gaps to Address
+
+- **Portrait photo:** The hero section cannot be finalized until Stephane provides the portrait. Use a placeholder (neutral square) during development; document the file specification (WebP, 560px, < 50KB).
+- **Exact contact details:** Phone number, email, SIRET, and social profile URLs are needed for `data.ts` and JSON-LD. These must be provided before Phase 4 SEO work begins.
+- **OG image design:** The 1200x630 Open Graph image cannot be auto-generated in static export (no `ImageResponse` without a server). It must be designed and committed as a static file. Plan who creates it.
+- **Color palette exact hex values:** PITFALLS.md provides estimates (ecru: #F5F0E8, sable: #E8DCC8, brun: #6B4C3B, etc.) but these should be confirmed against any existing design specification. Brun on sable is borderline WCAG AA -- use a slightly darker text variant if needed.
+- **Lucide React + schema-dts exact versions:** Install with `npm install lucide-react` and `npm install -D schema-dts` to resolve to latest; no need to pin versions in advance.
+
+## Sources
+
+### Primary (HIGH confidence)
+- Next.js 16.1.6 Static Exports: https://nextjs.org/docs/app/guides/static-exports (verified 2026-02-27)
+- Next.js 16.1.6 Font Optimization: https://nextjs.org/docs/app/getting-started/fonts (verified 2026-02-27)
+- Next.js 16.1.6 Image Component API: https://nextjs.org/docs/app/api-reference/components/image (verified 2026-02-27)
+- Next.js 16.1.6 Metadata API: https://nextjs.org/docs/app/api-reference/functions/generate-metadata (verified 2026-02-27)
+- Next.js 16.1.6 JSON-LD guide: https://nextjs.org/docs/app/guides/json-ld (verified 2026-02-27)
+- WCAG 2.1 AA contrast requirements (stable specification, HIGH confidence)
+- WAI-ARIA Authoring Practices for disclosure/menu patterns (stable specification, HIGH confidence)
+
+### Secondary (MEDIUM confidence)
+- Domain expertise on French local business sites, LCEN/RGAA requirements, mobile UX for non-tech audiences
+- Tailwind CSS 4 `@theme` configuration model -- training data, MEDIUM confidence
+- next/font behavior with static export -- training data corroborated by official Next.js docs
+
+### Tertiary (LOW confidence)
+- Lucide React exact latest version -- not verified via npm registry; resolve at install time
+- schema-dts exact latest version -- not verified via npm registry; resolve at install time
+
+---
+*Research completed: 2026-03-16*
+*Ready for roadmap: yes*

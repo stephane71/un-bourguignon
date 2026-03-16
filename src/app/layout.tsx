@@ -16,9 +16,10 @@ const instrumentSans = Instrument_Sans({
   variable: "--font-instrument",
 });
 
-const siteTitle = "Stéphane Maire — Consultant numérique de proximité";
+const siteTitle =
+  "Stéphane Maire — Consultant numérique de proximité | Saône-et-Loire";
 const siteDescription =
-  "Consultant numérique indépendant pour artisans, commerçants et petits entrepreneurs. Facturation électronique, outils de gestion, présence en ligne, formation IA et création d'outils sur mesure. Accompagnement personnalisé sur le terrain.";
+  "Consultant numérique indépendant en Saône-et-Loire pour artisans, commerçants et TPE. Facturation électronique, outils de gestion, présence en ligne, formation IA. Contactez-moi au 06 62 46 16 43.";
 const siteUrl = "https://un-bourguignon.com";
 
 export const metadata: Metadata = {
@@ -40,6 +41,41 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Stéphane Maire",
+  jobTitle: "Consultant numérique de proximité",
+  description:
+    "Consultant numérique indépendant pour artisans, commerçants et petits entrepreneurs en Saône-et-Loire et partout en France.",
+  telephone: "+33662461643",
+  email: "stephane-ei@un-bourguignon.com",
+  url: "https://un-bourguignon.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2 rue des Lavoirs",
+    addressLocality: "Moroges",
+    postalCode: "71390",
+    addressRegion: "Saône-et-Loire",
+    addressCountry: "FR",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "France",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/stephanemaire71",
+    "https://www.facebook.com/stephane.maire1",
+  ],
+  knowsAbout: [
+    "Facturation électronique",
+    "Outils numériques de gestion",
+    "Présence en ligne locale",
+    "Formation intelligence artificielle",
+    "Création d'outils personnalisés",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,6 +84,12 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${lora.variable} ${instrumentSans.variable}`}>
       <body className="font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />

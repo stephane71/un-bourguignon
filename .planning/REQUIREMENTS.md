@@ -65,11 +65,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Contact
 
-- [ ] **CONT-01**: Téléphone cliquable `tel:+33662461643` — tap-friendly (min. 48px)
-- [ ] **CONT-02**: Email cliquable `mailto:stephane-ei@un-bourguignon.com`
-- [ ] **CONT-03**: Liens LinkedIn et Facebook avec icônes
-- [ ] **CONT-04**: Layout mobile : éléments empilés en pleine largeur
-- [ ] **CONT-05**: Pas de formulaire — coordonnées directes uniquement
+- [x] **CONT-01**: Téléphone cliquable `tel:+33662461643` — tap-friendly (min. 48px)
+- [x] **CONT-02**: Email cliquable `mailto:stephane-ei@un-bourguignon.com`
+- [x] **CONT-03**: Liens LinkedIn et Facebook avec icônes
+- [x] **CONT-04**: Layout mobile : éléments empilés en pleine largeur
+- [x] **CONT-05**: Pas de formulaire — coordonnées directes uniquement
 
 ### Footer
 
@@ -178,11 +178,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | METH-05 | Phase 3 | Complete |
 | BENE-01 | Phase 3 | Complete |
 | BENE-02 | Phase 3 | Complete |
-| CONT-01 | Phase 3 | Pending |
-| CONT-02 | Phase 3 | Pending |
-| CONT-03 | Phase 3 | Pending |
-| CONT-04 | Phase 3 | Pending |
-| CONT-05 | Phase 3 | Pending |
+| CONT-01 | Phase 3 | Complete |
+| CONT-02 | Phase 3 | Complete |
+| CONT-03 | Phase 3 | Complete |
+| CONT-04 | Phase 3 | Complete |
+| CONT-05 | Phase 3 | Complete |
 | FOOT-01 | Phase 2 | Complete |
 | FOOT-02 | Phase 2 | Complete |
 | SEO-01 | Phase 4 | Pending |

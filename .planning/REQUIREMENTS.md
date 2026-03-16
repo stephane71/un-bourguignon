@@ -39,16 +39,16 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Pour qui
 
-- [ ] **POUR-01**: 4 cards présentant les problèmes courants des prospects
-- [ ] **POUR-02**: Layout cards empilées sur mobile, 2×2 sur desktop
-- [ ] **POUR-03**: Contenu issu de `presentation_activite.md` section 2
+- [x] **POUR-01**: 4 cards présentant les problèmes courants des prospects
+- [x] **POUR-02**: Layout cards empilées sur mobile, 2×2 sur desktop
+- [x] **POUR-03**: Contenu issu de `presentation_activite.md` section 2
 
 ### Services
 
-- [ ] **SERV-01**: 5 cards domaines d'intervention (facturation, outils, présence en ligne, IA, outils personnalisés)
-- [ ] **SERV-02**: Chaque card : titre + description + liste de sous-prestations
-- [ ] **SERV-03**: Layout 1 colonne mobile, 2 colonnes tablette, 3 colonnes desktop
-- [ ] **SERV-04**: Contenu issu de `presentation_activite.md` section 3
+- [x] **SERV-01**: 5 cards domaines d'intervention (facturation, outils, présence en ligne, IA, outils personnalisés)
+- [x] **SERV-02**: Chaque card : titre + description + liste de sous-prestations
+- [x] **SERV-03**: Layout 1 colonne mobile, 2 colonnes tablette, 3 colonnes desktop
+- [x] **SERV-04**: Contenu issu de `presentation_activite.md` section 3
 
 ### Méthode
 
@@ -164,13 +164,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HERO-06 | Phase 3 | Complete |
 | APRO-01 | Phase 3 | Complete |
 | APRO-02 | Phase 3 | Complete |
-| POUR-01 | Phase 3 | Pending |
-| POUR-02 | Phase 3 | Pending |
-| POUR-03 | Phase 3 | Pending |
-| SERV-01 | Phase 3 | Pending |
-| SERV-02 | Phase 3 | Pending |
-| SERV-03 | Phase 3 | Pending |
-| SERV-04 | Phase 3 | Pending |
+| POUR-01 | Phase 3 | Complete |
+| POUR-02 | Phase 3 | Complete |
+| POUR-03 | Phase 3 | Complete |
+| SERV-01 | Phase 3 | Complete |
+| SERV-02 | Phase 3 | Complete |
+| SERV-03 | Phase 3 | Complete |
+| SERV-04 | Phase 3 | Complete |
 | METH-01 | Phase 3 | Pending |
 | METH-02 | Phase 3 | Pending |
 | METH-03 | Phase 3 | Pending |

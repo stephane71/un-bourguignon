@@ -9,7 +9,7 @@ export function HeroSection() {
         {/* Portrait -- appears first on mobile (natural order), on the right on desktop */}
         <div className="lg:order-last flex-shrink-0">
           <Image
-            src="/images/photo-portrait.png"
+            src="/images/photo-portrait.webp"
             alt="Stéphane Maire, consultant numérique"
             width={280}
             height={280}

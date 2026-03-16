@@ -18,9 +18,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Navigation
 
-- [ ] **NAV-01**: Sticky header with anchor navigation links to all sections
-- [ ] **NAV-02**: Burger menu on mobile with accessible ARIA attributes and keyboard handling
-- [ ] **NAV-03**: CTA "Me contacter" in header linking to `#contact`
+- [x] **NAV-01**: Sticky header with anchor navigation links to all sections
+- [x] **NAV-02**: Burger menu on mobile with accessible ARIA attributes and keyboard handling
+- [x] **NAV-03**: CTA "Me contacter" in header linking to `#contact`
 - [x] **NAV-04**: Smooth scroll to anchors via CSS `scroll-behavior: smooth` + `scroll-margin-top`
 
 ### Hero
@@ -89,7 +89,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **A11Y-01**: Contraste WCAG AA (ratio ≥ 4.5:1) sur toutes les combinaisons texte/fond
 - [x] **A11Y-02**: Tous éléments interactifs min. 48px de hauteur
-- [ ] **A11Y-03**: Navigation clavier fonctionnelle avec focus visible
+- [x] **A11Y-03**: Navigation clavier fonctionnelle avec focus visible
 - [ ] **A11Y-04**: Attributs alt sur toutes les images
 - [ ] **A11Y-05**: Support `prefers-reduced-motion` (désactiver smooth scroll et transitions)
 
@@ -152,9 +152,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOND-04 | Phase 1 | Complete |
 | FOND-05 | Phase 1 | Complete |
 | FOND-06 | Phase 1 | Complete |
-| NAV-01 | Phase 2 | Pending |
-| NAV-02 | Phase 2 | Pending |
-| NAV-03 | Phase 2 | Pending |
+| NAV-01 | Phase 2 | Complete |
+| NAV-02 | Phase 2 | Complete |
+| NAV-03 | Phase 2 | Complete |
 | NAV-04 | Phase 2 | Complete |
 | HERO-01 | Phase 3 | Pending |
 | HERO-02 | Phase 3 | Pending |
@@ -193,7 +193,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-06 | Phase 4 | Pending |
 | A11Y-01 | Phase 4 | Pending |
 | A11Y-02 | Phase 2 | Complete |
-| A11Y-03 | Phase 2 | Pending |
+| A11Y-03 | Phase 2 | Complete |
 | A11Y-04 | Phase 3 | Pending |
 | A11Y-05 | Phase 4 | Pending |
 | PERF-01 | Phase 4 | Pending |

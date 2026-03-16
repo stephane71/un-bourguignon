@@ -13,7 +13,7 @@ A 4-phase build delivering a one-page static showcase site for a local digital c
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Foundation & Design System** - Static export config, Tailwind CSS 4 theme tokens, font setup, and reusable UI primitives
-- [ ] **Phase 2: Layout Shell** - Sticky header with mobile burger menu, footer, root layout with metadata skeleton
+- [x] **Phase 2: Layout Shell** - Sticky header with mobile burger menu, footer, root layout with metadata skeleton (completed 2026-03-16)
 - [ ] **Phase 3: Content Sections** - All 7 page sections (Hero, A propos, Pour qui, Services, Methode, Benefices, Contact)
 - [ ] **Phase 4: SEO, Legal & Polish** - JSON-LD, Open Graph, mentions legales, favicon, accessibility audit, Lighthouse targets
 
@@ -91,6 +91,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 0/2 | Planning complete | - |
-| 2. Layout Shell | 1/2 | In Progress|  |
+| 2. Layout Shell | 2/2 | Complete   | 2026-03-16 |
 | 3. Content Sections | 0/TBD | Not started | - |
 | 4. SEO, Legal & Polish | 0/TBD | Not started | - |

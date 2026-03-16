@@ -15,7 +15,18 @@
   --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
 }
 
+:root {
+  color-scheme: light;
+  --color-ecru: #F5F0E8;
+  --color-sable: #E8DCC8;
+  --color-brun: #6B4C3B;
+  --color-terre: #8B6914;
+  --color-or: #C5973B;
+  --color-or-light: #D4A574;
+  --color-argile: #B8754C;
+}
+
 body {
-  color: theme(--color-brun);
+  color: var(--color-brun);
   background-color: #ffffff;
 }

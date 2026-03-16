@@ -83,15 +83,15 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **SEO-03**: Open Graph tags (title, description, locale fr_FR, type website)
 - [ ] **SEO-04**: JSON-LD LocalBusiness (name, jobTitle, telephone, email, address, sameAs)
 - [ ] **SEO-05**: Semantic HTML avec hiérarchie H1 > H2 > H3 correcte
-- [ ] **SEO-06**: Page mentions légales `/mentions-legales` (nom, forme juridique, adresse, email, SIRET, hébergeur)
+- [x] **SEO-06**: Page mentions légales `/mentions-legales` (nom, forme juridique, adresse, email, SIRET, hébergeur)
 
 ### Accessibilité
 
-- [ ] **A11Y-01**: Contraste WCAG AA (ratio ≥ 4.5:1) sur toutes les combinaisons texte/fond
+- [x] **A11Y-01**: Contraste WCAG AA (ratio ≥ 4.5:1) sur toutes les combinaisons texte/fond
 - [x] **A11Y-02**: Tous éléments interactifs min. 48px de hauteur
 - [x] **A11Y-03**: Navigation clavier fonctionnelle avec focus visible
 - [x] **A11Y-04**: Attributs alt sur toutes les images
-- [ ] **A11Y-05**: Support `prefers-reduced-motion` (désactiver smooth scroll et transitions)
+- [x] **A11Y-05**: Support `prefers-reduced-motion` (désactiver smooth scroll et transitions)
 
 ### Performance
 
@@ -103,7 +103,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Polish
 
-- [ ] **POLI-01**: Print-friendly stylesheet (@media print : masquer nav/footer, afficher coordonnées)
+- [x] **POLI-01**: Print-friendly stylesheet (@media print : masquer nav/footer, afficher coordonnées)
 - [ ] **POLI-02**: Favicon initiales "SM" dans la palette Artisan Numérique
 
 ## v2 Requirements
@@ -190,18 +190,18 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-03 | Phase 4 | Pending |
 | SEO-04 | Phase 4 | Pending |
 | SEO-05 | Phase 4 | Pending |
-| SEO-06 | Phase 4 | Pending |
-| A11Y-01 | Phase 4 | Pending |
+| SEO-06 | Phase 4 | Complete |
+| A11Y-01 | Phase 4 | Complete |
 | A11Y-02 | Phase 2 | Complete |
 | A11Y-03 | Phase 2 | Complete |
 | A11Y-04 | Phase 3 | Complete |
-| A11Y-05 | Phase 4 | Pending |
+| A11Y-05 | Phase 4 | Complete |
 | PERF-01 | Phase 4 | Pending |
 | PERF-02 | Phase 4 | Pending |
 | PERF-03 | Phase 4 | Pending |
 | PERF-04 | Phase 4 | Pending |
 | PERF-05 | Phase 4 | Pending |
-| POLI-01 | Phase 4 | Pending |
+| POLI-01 | Phase 4 | Complete |
 | POLI-02 | Phase 4 | Pending |
 
 **Coverage:**

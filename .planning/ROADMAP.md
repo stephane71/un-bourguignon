@@ -60,12 +60,13 @@ Plans:
   3. The phone number in the Contact section is a tappable `tel:` link that opens the dialer on mobile, and email opens the mail client
   4. Service cards display in 1 column on mobile, 2 on tablet, 3 on desktop -- with correct handling of the 5th card at the 3-column breakpoint
   5. All images have alt attributes and all content sections use semantic headings (H2 for sections, H3 for subsections)
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
-- [ ] 03-03: TBD
+- [ ] 03-01-PLAN.md — 6 new SVG icons + HeroSection + AProposSection
+- [ ] 03-02-PLAN.md — PourQuiSection + ServicesSection (card-based sections)
+- [ ] 03-03-PLAN.md — MethodeSection (stepper + table) + BeneficesSection (icons + text)
+- [ ] 03-04-PLAN.md — ContactSection + page.tsx wiring + build verification
 
 ### Phase 4: SEO, Legal & Polish
 **Goal**: The site is discoverable by search engines, legally compliant, performant, and ready for production deployment
@@ -92,5 +93,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 0/2 | Planning complete | - |
 | 2. Layout Shell | 2/2 | Complete   | 2026-03-16 |
-| 3. Content Sections | 0/TBD | Not started | - |
+| 3. Content Sections | 0/4 | Planning complete | - |
 | 4. SEO, Legal & Polish | 0/TBD | Not started | - |

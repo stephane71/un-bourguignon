@@ -91,6 +91,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 0/2 | Planning complete | - |
-| 2. Layout Shell | 0/2 | Planning complete | - |
+| 2. Layout Shell | 1/2 | In Progress|  |
 | 3. Content Sections | 0/TBD | Not started | - |
 | 4. SEO, Legal & Polish | 0/TBD | Not started | - |

@@ -21,7 +21,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **NAV-01**: Sticky header with anchor navigation links to all sections
 - [ ] **NAV-02**: Burger menu on mobile with accessible ARIA attributes and keyboard handling
 - [ ] **NAV-03**: CTA "Me contacter" in header linking to `#contact`
-- [ ] **NAV-04**: Smooth scroll to anchors via CSS `scroll-behavior: smooth` + `scroll-margin-top`
+- [x] **NAV-04**: Smooth scroll to anchors via CSS `scroll-behavior: smooth` + `scroll-margin-top`
 
 ### Hero
 
@@ -73,8 +73,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Footer
 
-- [ ] **FOOT-01**: Liens réseaux sociaux, email, téléphone
-- [ ] **FOOT-02**: Lien vers mentions légales
+- [x] **FOOT-01**: Liens réseaux sociaux, email, téléphone
+- [x] **FOOT-02**: Lien vers mentions légales
 
 ### SEO & Legal
 
@@ -88,7 +88,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Accessibilité
 
 - [ ] **A11Y-01**: Contraste WCAG AA (ratio ≥ 4.5:1) sur toutes les combinaisons texte/fond
-- [ ] **A11Y-02**: Tous éléments interactifs min. 48px de hauteur
+- [x] **A11Y-02**: Tous éléments interactifs min. 48px de hauteur
 - [ ] **A11Y-03**: Navigation clavier fonctionnelle avec focus visible
 - [ ] **A11Y-04**: Attributs alt sur toutes les images
 - [ ] **A11Y-05**: Support `prefers-reduced-motion` (désactiver smooth scroll et transitions)
@@ -155,7 +155,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NAV-01 | Phase 2 | Pending |
 | NAV-02 | Phase 2 | Pending |
 | NAV-03 | Phase 2 | Pending |
-| NAV-04 | Phase 2 | Pending |
+| NAV-04 | Phase 2 | Complete |
 | HERO-01 | Phase 3 | Pending |
 | HERO-02 | Phase 3 | Pending |
 | HERO-03 | Phase 3 | Pending |
@@ -183,8 +183,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-03 | Phase 3 | Pending |
 | CONT-04 | Phase 3 | Pending |
 | CONT-05 | Phase 3 | Pending |
-| FOOT-01 | Phase 2 | Pending |
-| FOOT-02 | Phase 2 | Pending |
+| FOOT-01 | Phase 2 | Complete |
+| FOOT-02 | Phase 2 | Complete |
 | SEO-01 | Phase 4 | Pending |
 | SEO-02 | Phase 4 | Pending |
 | SEO-03 | Phase 4 | Pending |
@@ -192,7 +192,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-05 | Phase 4 | Pending |
 | SEO-06 | Phase 4 | Pending |
 | A11Y-01 | Phase 4 | Pending |
-| A11Y-02 | Phase 2 | Pending |
+| A11Y-02 | Phase 2 | Complete |
 | A11Y-03 | Phase 2 | Pending |
 | A11Y-04 | Phase 3 | Pending |
 | A11Y-05 | Phase 4 | Pending |

@@ -28,11 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. The "Artisan Numerique" color palette (ecru, sable, brun, terre, or, argile) is available as Tailwind utility classes
   3. Lora (serif) and Instrument Sans (sans-serif) render correctly on a page with no flash of unstyled text
   4. A test page with layout primitives displays correctly on mobile (375px) and desktop (1280px) viewports
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Static export config, design tokens, font loading
+- [ ] 01-02-PLAN.md — UI primitives (Container, Section, Button, Card) and visual test page
 
 ### Phase 2: Layout Shell
 **Goal**: Users see a fixed header with working navigation, a footer, and the page structure is ready to receive content sections
@@ -90,7 +90,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Design System | 0/TBD | Not started | - |
+| 1. Foundation & Design System | 0/2 | Planning complete | - |
 | 2. Layout Shell | 0/TBD | Not started | - |
 | 3. Content Sections | 0/TBD | Not started | - |
 | 4. SEO, Legal & Polish | 0/TBD | Not started | - |

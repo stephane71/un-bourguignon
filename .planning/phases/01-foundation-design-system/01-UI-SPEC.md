@@ -39,12 +39,12 @@ Declared values (multiples of 4). Tailwind CSS 4 default spacing utilities apply
 | xl | 32px | Section heading to content gap, responsive horizontal padding (lg breakpoint) |
 | 2xl | 48px | Not used in Phase 1; reserved for future section breaks |
 | 3xl | 64px | Section vertical padding (mobile: `py-16` = 64px) |
-| 4xl | 80px | Section vertical padding (sm: `py-20` = 80px) |
-| 5xl | 96px | Section vertical padding (lg: `py-24` = 96px) |
 
 Exceptions:
 - Button minimum height: 48px (accessibility tap target per A11Y-02, uses `min-h-12` in Tailwind)
 - Container max-width: 1152px (`max-w-6xl` in Tailwind) -- chosen to keep line lengths readable while filling widescreen viewports
+- Section vertical padding at sm breakpoint: 80px (`sm:py-20`) -- layout-scale value chosen to match Tailwind's native scale at the larger end, providing generous breathing space per the "space that breathes" design philosophy. Not a component-scale spacing value.
+- Section vertical padding at lg breakpoint: 96px (`lg:py-24`) -- layout-scale value chosen to match Tailwind's native scale at the larger end, providing generous breathing space per the "space that breathes" design philosophy. Not a component-scale spacing value.
 
 ---
 
@@ -59,20 +59,24 @@ Exceptions:
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing | Tailwind Classes |
 |------|------|------|--------|-------------|----------------|-----------------|
-| Body | Instrument Sans | 16px | 400 (regular) | 1.625 (26px) | normal | `font-sans text-base font-normal leading-relaxed` |
 | Body small | Instrument Sans | 14px | 400 (regular) | 1.5 (21px) | normal | `font-sans text-sm font-normal leading-normal` |
-| Label / Button | Instrument Sans | 16px | 600 (semibold) | 1.25 (20px) | 0.01em | `font-sans text-base font-semibold leading-tight tracking-wide` |
-| Section heading (H2) | Lora | 28px | 700 (bold) | 1.2 (33.6px) | -0.01em | `font-serif text-[28px] font-bold leading-tight tracking-tight` |
-| Section heading (H2) desktop | Lora | 36px | 700 (bold) | 1.2 (43.2px) | -0.01em | `font-serif text-[28px] lg:text-4xl font-bold leading-tight tracking-tight` |
-| Display / H1 | Lora | 36px | 700 (bold) | 1.15 (41.4px) | -0.02em | `font-serif text-4xl font-bold` |
-| Display / H1 desktop | Lora | 48px | 700 (bold) | 1.1 (52.8px) | -0.02em | `font-serif text-4xl lg:text-5xl font-bold` |
+| Body / Label / Button | Instrument Sans | 16px | 400 (regular), 700 (bold) for buttons/labels | 1.625 (26px) body, 1.25 (20px) label | normal body, 0.01em label | Body: `font-sans text-base font-normal leading-relaxed` / Label: `font-sans text-base font-bold leading-tight tracking-wide` |
+| Section heading (H2) | Lora | 36px | 700 (bold) | 1.2 (43.2px) | -0.01em | `font-serif text-[28px] sm:text-4xl font-bold leading-tight tracking-tight` (28px at mobile is a responsive modifier, not a separate size) |
+| Display / H1 | Lora | 48px | 700 (bold) | 1.1 (52.8px) | -0.02em | `font-serif text-4xl lg:text-5xl font-bold` (36px at mobile is a responsive modifier, not a separate size) |
+
+### Font Weights Used
+
+| Weight | Value | Usage |
+|--------|-------|-------|
+| Regular | 400 | Body text, descriptions, card content |
+| Bold | 700 | Headings, buttons, labels, interactive elements |
 
 ### Font Weights Loaded
 
 | Font | Weights | Rationale |
 |------|---------|-----------|
 | Lora | 400-700 (variable) | Variable font, full range auto-included; 400 for italic slogan, 700 for headings |
-| Instrument Sans | 400-700 (variable) | Variable font, full range auto-included; 400 for body, 600 for buttons/labels |
+| Instrument Sans | 400-700 (variable) | Variable font, full range auto-included; 400 for body, 700 for buttons/labels |
 
 ---
 
@@ -143,7 +147,7 @@ Accent reserved for: primary button background (brun), focus ring outlines (brun
 | Background | brun `#6B4C3B` | transparent |
 | Text color | white `#FFFFFF` | brun `#6B4C3B` |
 | Border | none | 1.5px solid brun `#6B4C3B` |
-| Font | Instrument Sans, 16px, semibold (600) | Instrument Sans, 16px, semibold (600) |
+| Font | Instrument Sans, 16px, bold (700) | Instrument Sans, 16px, bold (700) |
 | Min height | 48px (`min-h-12`) | 48px (`min-h-12`) |
 | Horizontal padding | 24px (`px-6`) | 24px (`px-6`) |
 | Border radius | 8px (`rounded-lg`) | 8px (`rounded-lg`) |

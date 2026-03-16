@@ -13,7 +13,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **FOND-02**: Tailwind CSS 4 theme tokens defined via `@theme` (palette écru/sable/brun/terre/or/argile)
 - [x] **FOND-03**: Google Fonts loaded via next/font/google (Lora + Instrument Sans) with CSS variables
 - [x] **FOND-04**: Dark mode CSS boilerplate stripped from globals.css
-- [ ] **FOND-05**: Mobile-first responsive layout with Tailwind breakpoints (base/sm/md/lg/xl)
+- [x] **FOND-05**: Mobile-first responsive layout with Tailwind breakpoints (base/sm/md/lg/xl)
 - [x] **FOND-06**: HTML lang attribute set to `fr`
 
 ### Navigation
@@ -150,7 +150,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOND-02 | Phase 1 | Complete |
 | FOND-03 | Phase 1 | Complete |
 | FOND-04 | Phase 1 | Complete |
-| FOND-05 | Phase 1 | Pending |
+| FOND-05 | Phase 1 | Complete |
 | FOND-06 | Phase 1 | Complete |
 | NAV-01 | Phase 2 | Pending |
 | NAV-02 | Phase 2 | Pending |

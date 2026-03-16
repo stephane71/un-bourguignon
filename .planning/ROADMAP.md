@@ -44,11 +44,11 @@ Plans:
   3. Tapping "Me contacter" in the header scrolls smoothly to the contact section with correct offset (not hidden behind header)
   4. Footer displays social links, email, phone, and a link to mentions legales
   5. All interactive elements (links, buttons, burger toggle) have a minimum tap target of 48px and visible focus indicators
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md — Icon SVG components, Footer, and CSS scroll infrastructure
+- [ ] 02-02-PLAN.md — Header with desktop nav, MobileMenu with ARIA/focus, layout integration
 
 ### Phase 3: Content Sections
 **Goal**: The complete one-page content is visible and functional -- a visitor can read the full narrative from Hero to Contact and take action
@@ -91,6 +91,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 0/2 | Planning complete | - |
-| 2. Layout Shell | 0/TBD | Not started | - |
+| 2. Layout Shell | 0/2 | Planning complete | - |
 | 3. Content Sections | 0/TBD | Not started | - |
 | 4. SEO, Legal & Polish | 0/TBD | Not started | - |

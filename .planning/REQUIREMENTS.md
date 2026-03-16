@@ -25,17 +25,17 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Hero
 
-- [ ] **HERO-01**: H1 with name "Stéphane Maire" + sous-titre "Consultant numérique de proximité"
-- [ ] **HERO-02**: Slogan en italic "La méthode d'un expert, la proximité d'un artisan."
-- [ ] **HERO-03**: Portrait circulaire (200px mobile, 280px desktop) avec photo réelle
-- [ ] **HERO-04**: CTA principal "Prendre contact" → `#contact`
-- [ ] **HERO-05**: CTA secondaire "Découvrir mes services" → `#services`
-- [ ] **HERO-06**: Layout mobile (portrait centré au-dessus du texte) et desktop (côte à côte)
+- [x] **HERO-01**: H1 with name "Stéphane Maire" + sous-titre "Consultant numérique de proximité"
+- [x] **HERO-02**: Slogan en italic "La méthode d'un expert, la proximité d'un artisan."
+- [x] **HERO-03**: Portrait circulaire (200px mobile, 280px desktop) avec photo réelle
+- [x] **HERO-04**: CTA principal "Prendre contact" → `#contact`
+- [x] **HERO-05**: CTA secondaire "Découvrir mes services" → `#services`
+- [x] **HERO-06**: Layout mobile (portrait centré au-dessus du texte) et desktop (côte à côte)
 
 ### À propos
 
-- [ ] **APRO-01**: Section présentant Stéphane avec contenu issu de `presentation_activite.md` section 1
-- [ ] **APRO-02**: Points clés : indépendant, relation directe, déplacement client, EI
+- [x] **APRO-01**: Section présentant Stéphane avec contenu issu de `presentation_activite.md` section 1
+- [x] **APRO-02**: Points clés : indépendant, relation directe, déplacement client, EI
 
 ### Pour qui
 
@@ -90,7 +90,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **A11Y-01**: Contraste WCAG AA (ratio ≥ 4.5:1) sur toutes les combinaisons texte/fond
 - [x] **A11Y-02**: Tous éléments interactifs min. 48px de hauteur
 - [x] **A11Y-03**: Navigation clavier fonctionnelle avec focus visible
-- [ ] **A11Y-04**: Attributs alt sur toutes les images
+- [x] **A11Y-04**: Attributs alt sur toutes les images
 - [ ] **A11Y-05**: Support `prefers-reduced-motion` (désactiver smooth scroll et transitions)
 
 ### Performance
@@ -156,14 +156,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NAV-02 | Phase 2 | Complete |
 | NAV-03 | Phase 2 | Complete |
 | NAV-04 | Phase 2 | Complete |
-| HERO-01 | Phase 3 | Pending |
-| HERO-02 | Phase 3 | Pending |
-| HERO-03 | Phase 3 | Pending |
-| HERO-04 | Phase 3 | Pending |
-| HERO-05 | Phase 3 | Pending |
-| HERO-06 | Phase 3 | Pending |
-| APRO-01 | Phase 3 | Pending |
-| APRO-02 | Phase 3 | Pending |
+| HERO-01 | Phase 3 | Complete |
+| HERO-02 | Phase 3 | Complete |
+| HERO-03 | Phase 3 | Complete |
+| HERO-04 | Phase 3 | Complete |
+| HERO-05 | Phase 3 | Complete |
+| HERO-06 | Phase 3 | Complete |
+| APRO-01 | Phase 3 | Complete |
+| APRO-02 | Phase 3 | Complete |
 | POUR-01 | Phase 3 | Pending |
 | POUR-02 | Phase 3 | Pending |
 | POUR-03 | Phase 3 | Pending |
@@ -194,7 +194,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | A11Y-01 | Phase 4 | Pending |
 | A11Y-02 | Phase 2 | Complete |
 | A11Y-03 | Phase 2 | Complete |
-| A11Y-04 | Phase 3 | Pending |
+| A11Y-04 | Phase 3 | Complete |
 | A11Y-05 | Phase 4 | Pending |
 | PERF-01 | Phase 4 | Pending |
 | PERF-02 | Phase 4 | Pending |

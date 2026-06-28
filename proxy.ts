@@ -3,7 +3,7 @@ import { get } from '@vercel/edge-config';
 
 export const config = { matcher: '/go/:slug*' };
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
     const slug = request.nextUrl.pathname
         .replace(/^\/go\//, '')
         .replace(/\/$/, '');

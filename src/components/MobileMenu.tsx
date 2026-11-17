@@ -72,7 +72,7 @@ export function MobileMenu() {
         role="dialog"
         aria-modal="true"
         aria-label="Menu de navigation"
-        className={`fixed inset-0 top-16 z-40 bg-white ${isOpen ? "motion-safe:transition-opacity duration-200 opacity-100" : "hidden"}`}
+        className={`fixed inset-0 top-16 z-40 bg-ecru ${isOpen ? "motion-safe:transition-opacity duration-200 opacity-100" : "hidden"}`}
       >
         <nav
           className="flex flex-col items-center justify-center h-full gap-8"

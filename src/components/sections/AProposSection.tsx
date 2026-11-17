@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Section } from "@/components/ui/Section";
+import { LabeledSection } from "@/components/ui/LabeledSection";
 
 const valeurs = [
   {
@@ -18,43 +18,40 @@ const valeurs = [
 
 export function AProposSection() {
   return (
-    <Section id="a-propos">
-      <h2 className="font-serif text-xl lg:text-4xl font-bold">
-        Qui suis-je ?
-      </h2>
+    <LabeledSection id="a-propos" label="Votre interlocuteur" title="Qui suis-je ?">
       <div className="mt-8 flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-10">
         <Image
           src="/images/photo-portrait.webp"
           alt="Stéphane Maire"
           width={200}
           height={200}
-          className="rounded-full flex-shrink-0 w-[140px] h-[140px] lg:w-[200px] lg:h-[200px]"
+          className="rounded-full flex-shrink-0 w-[140px] h-[140px] lg:w-[180px] lg:h-[180px]"
         />
-      <div className="max-w-3xl space-y-6">
-        <p className="text-base leading-relaxed">
-          Je suis Stéphane Maire, ingénieur logiciel. Pendant plus de 15 ans à
-          Paris, j&apos;ai conçu et développé des logiciels sur des sujets liés
-          à la finance, aux réseaux et à la vente.
-        </p>
-        <p className="text-base leading-relaxed">
-          Je commence toujours par écouter ceux qui font le travail, à leur
-          poste, sur leurs supports réels. Du premier entretien à la mise en
-          service, vous avez un seul interlocuteur, qui connaît votre métier.
-        </p>
-        <p className="text-base leading-relaxed">
-          Je me déplace dans vos locaux et je travaille à distance, partout
-          en France métropolitaine.
-        </p>
-      </div>
+        <div className="max-w-[62ch] space-y-5">
+          <p className="text-base leading-relaxed">
+            Je suis Stéphane Maire, ingénieur logiciel. Pendant plus de 15 ans
+            à Paris, j&apos;ai conçu et développé des logiciels sur des sujets
+            liés à la finance, aux réseaux et à la vente.
+          </p>
+          <p className="text-base leading-relaxed">
+            Je commence toujours par écouter ceux qui font le travail, à leur
+            poste, sur leurs supports réels. Du premier entretien à la mise en
+            service, vous avez un seul interlocuteur, qui connaît votre métier.
+          </p>
+          <p className="text-base leading-relaxed">
+            Je me déplace dans vos locaux et je travaille à distance, partout
+            en France métropolitaine.
+          </p>
+        </div>
       </div>
       <dl className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
         {valeurs.map((v) => (
-          <div key={v.titre} className="border-l-4 border-or pl-4">
-            <dt className="font-serif font-bold text-xl">{v.titre}</dt>
+          <div key={v.titre} className="border-t border-sable pt-4">
+            <dt className="font-serif font-bold text-lg">{v.titre}</dt>
             <dd className="mt-1 text-base leading-relaxed">{v.texte}</dd>
           </div>
         ))}
       </dl>
-    </Section>
+    </LabeledSection>
   );
 }

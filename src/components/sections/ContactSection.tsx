@@ -1,61 +1,41 @@
-import { Section } from "@/components/ui/Section";
-import { Phone } from "@/components/icons/Phone";
-import { Mail } from "@/components/icons/Mail";
-import { LinkedIn } from "@/components/icons/LinkedIn";
-import { Facebook } from "@/components/icons/Facebook";
+import { LabeledSection } from "@/components/ui/LabeledSection";
 
 export function ContactSection() {
   return (
-    <Section id="contact">
-      <div className="max-w-md mx-auto text-center">
-        <h2 className="font-serif text-xl lg:text-4xl font-bold">
-          Un premier échange, gratuit
-        </h2>
-        <p className="mt-4 text-base leading-relaxed">
-          Par téléphone ou en visioconférence. Vous me décrivez ce qui prend
-          du temps dans votre gestion. À l&apos;issue de cet échange, vous
-          savez si un cadrage est utile à votre entreprise.
-        </p>
-
-        <div className="mt-8 flex flex-col gap-4">
-          <a
-            href="tel:+33662461643"
-            className="flex items-center justify-center gap-3 min-h-12 w-full bg-brun text-white rounded-lg px-6 py-3 font-sans font-bold text-base hover:bg-brun/90 transition-colors focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2"
-          >
-            <Phone size={20} />
-            06 62 46 16 43
-          </a>
-
-          <a
-            href="mailto:stephane@un-bourguignon.com"
-            className="flex items-center justify-center gap-3 min-h-12 w-full border border-brun text-brun rounded-lg px-6 py-3 font-sans font-bold text-base hover:bg-ecru transition-colors focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2"
-          >
-            <Mail size={20} />
-            stephane@un-bourguignon.com
-          </a>
+    <LabeledSection
+      id="contact"
+      label="Prochaine étape"
+      title="Un premier échange gratuit, par téléphone ou en visioconférence."
+      intro="Vous décrivez ce qui prend du temps dans votre gestion. À l'issue de cet échange, vous savez si un cadrage est utile à votre entreprise."
+    >
+      <dl className="mt-8 max-w-[640px] border-t border-brun">
+        <div className="grid grid-cols-1 sm:grid-cols-[7rem_minmax(0,1fr)] items-baseline gap-1 sm:gap-4 py-4 border-b border-sable">
+          <dt className="text-xs font-bold uppercase tracking-[0.1em]">
+            Téléphone
+          </dt>
+          <dd>
+            <a
+              href="tel:+33662461643"
+              className="font-serif text-2xl font-bold underline-offset-4 hover:underline inline-flex min-h-12 items-center"
+            >
+              06 62 46 16 43
+            </a>
+          </dd>
         </div>
-
-        <div className="mt-6 flex items-center justify-center gap-6">
-          <a
-            href="https://www.linkedin.com/in/stephanemaire71"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="min-h-12 min-w-12 flex items-center justify-center text-brun hover:text-brun/70 transition-colors focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2 rounded-lg"
-          >
-            <LinkedIn size={24} />
-          </a>
-          <a
-            href="https://www.facebook.com/stephane.maire1"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="min-h-12 min-w-12 flex items-center justify-center text-brun hover:text-brun/70 transition-colors focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2 rounded-lg"
-          >
-            <Facebook size={24} />
-          </a>
+        <div className="grid grid-cols-1 sm:grid-cols-[7rem_minmax(0,1fr)] items-baseline gap-1 sm:gap-4 py-4 border-b border-sable">
+          <dt className="text-xs font-bold uppercase tracking-[0.1em]">
+            Courriel
+          </dt>
+          <dd className="min-w-0">
+            <a
+              href="mailto:stephane@un-bourguignon.com"
+              className="font-serif text-xl sm:text-2xl font-bold underline-offset-4 hover:underline inline-flex min-h-12 items-center break-all"
+            >
+              stephane@un-bourguignon.com
+            </a>
+          </dd>
         </div>
-      </div>
-    </Section>
+      </dl>
+    </LabeledSection>
   );
 }

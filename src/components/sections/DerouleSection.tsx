@@ -1,5 +1,4 @@
-import { Section } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
+import { LabeledSection } from "@/components/ui/LabeledSection";
 
 const entretiens = [
   {
@@ -28,9 +27,9 @@ const entretiens = [
 
 const livrables = [
   {
-    titre: "Le dossier d'audit chiffré",
+    titre: "Le dossier d'audit",
     texte:
-      "Votre circuit actuel décrit geste par geste : volumes, temps, coût annuel en euros, ce qui repose sur la mémoire d'une personne.",
+      "Votre circuit actuel décrit geste par geste : volumes, temps, coût annuel en euros, ce qui repose sur la mémoire d'une personne, les risques.",
   },
   {
     titre: "La maquette",
@@ -38,9 +37,27 @@ const livrables = [
       "La future solution en maquette, alimentée par un échantillon de vos données réelles. Vous jugez sur pièce.",
   },
   {
-    titre: "Le devis ferme",
+    titre: "Le devis de réalisation",
     texte:
-      "Les briques, leur ordre, leur prix et leur calendrier, avec les gains attendus en heures et en euros.",
+      "Les briques, leur ordre, leur prix ferme et leur calendrier. Les gains attendus en heures et en euros, hypothèses écrites.",
+  },
+];
+
+const deuxMois = [
+  {
+    titre: "Premier mois",
+    texte:
+      "Construction, puis premiers essais sur vos données. Vous manipulez la brique dès ce premier mois.",
+  },
+  {
+    titre: "Second mois",
+    texte:
+      "Mise en service, ajustements, documentation, prise en main par vos équipes.",
+  },
+  {
+    titre: "Validation",
+    texte:
+      "Sur des critères écrits au devis et vérifiés sur vos données. Ce que la brique doit faire est connu avant qu'elle commence.",
   },
 ];
 
@@ -53,7 +70,7 @@ const briques = [
   {
     titre: "Du devis à la facture",
     texte:
-      "Devis, commande et facture électronique conforme, enchaînés sans ressaisie.",
+      "Devis, commande et facture électronique conforme, enchaînés sans ressaisie, relances comprises.",
   },
   {
     titre: "Suivi de production",
@@ -77,129 +94,140 @@ const briques = [
 
 function Fiche({ items }: { items: { label: string; valeur: string }[] }) {
   return (
-    <dl className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
-      {items.map((item) => (
-        <div key={item.label} className="bg-ecru rounded-lg p-4">
-          <dt className="text-sm uppercase tracking-wide">{item.label}</dt>
-          <dd className="mt-1 font-serif text-xl font-bold">{item.valeur}</dd>
+    <dl className="mt-5 grid grid-cols-1 sm:grid-cols-3 border border-sable bg-white">
+      {items.map((item, i) => (
+        <div
+          key={item.label}
+          className={`p-4 ${i > 0 ? "border-t sm:border-t-0 sm:border-l border-sable" : ""}`}
+        >
+          <dt className="text-xs uppercase tracking-[0.1em]">{item.label}</dt>
+          <dd className="mt-1 font-serif text-lg font-bold leading-snug">
+            {item.valeur}
+          </dd>
         </div>
       ))}
     </dl>
   );
 }
 
+function Repere({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="mt-10 text-xs font-bold uppercase tracking-[0.12em] text-terre">
+      {children}
+    </p>
+  );
+}
+
+function TroisColonnes({ items }: { items: { titre: string; texte: string }[] }) {
+  return (
+    <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {items.map((l) => (
+        <div key={l.titre} className="border-t border-sable pt-4">
+          <h4 className="font-serif text-lg font-bold">{l.titre}</h4>
+          <p className="mt-1 text-base leading-relaxed">{l.texte}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function DerouleSection() {
   return (
-    <Section id="deroule" alternate>
-      <h2 className="font-serif text-xl lg:text-4xl font-bold">
-        Le déroulé et les prix
-      </h2>
-      <p className="mt-4 text-base leading-relaxed max-w-3xl">
-        Mesurer d&apos;abord, construire ensuite, brique par brique. Les prix
-        sont des forfaits fermes, connus avant tout engagement. Après chaque
-        étape, vous décidez : vous continuez, vous attendez ou vous arrêtez.
-      </p>
-
+    <LabeledSection
+      id="deroule"
+      label="Le déroulé et les prix"
+      title="Mesurer d'abord, construire ensuite, brique par brique."
+    >
       {/* Étape 1 */}
-      <Card variant="on-ecru" className="mt-10 border-t-3 border-or">
-        <p className="font-sans text-sm font-bold uppercase tracking-wide text-terre">
-          Étape 1
-        </p>
-        <h3 className="mt-1 font-serif text-2xl font-bold">Le cadrage</h3>
+      <div className="mt-8 border-t border-brun pt-6">
+        <h3 className="font-serif text-2xl lg:text-3xl font-bold">
+          <span className="mr-3 align-middle font-sans text-sm font-bold text-terre">
+            Étape 1
+          </span>
+          Le cadrage
+        </h3>
         <Fiche
           items={[
-            { label: "Prix", valeur: "3 000 € HT" },
+            { label: "Prix", valeur: "3 000 € HT, forfait ferme" },
             { label: "Durée", valeur: "Un mois" },
             { label: "Règlement", valeur: "À la remise du dossier" },
           ]}
         />
-        <p className="mt-6 text-base leading-relaxed">
+        <p className="mt-6 max-w-[62ch] text-base leading-relaxed">
           En un mois, vous savez ce que vous coûte votre gestion actuelle, à
-          quoi ressemblera la solution et ce qu&apos;elle coûtera. Cinq
-          entretiens avec ceux qui font le travail, dans vos locaux ou à
-          distance :
+          quoi ressemblera la solution et ce qu&apos;elle coûtera.
         </p>
-        <ol className="mt-4 space-y-2 text-base leading-relaxed list-decimal list-inside marker:font-bold marker:text-terre">
-          {entretiens.map((e) => (
-            <li key={e.titre}>
-              <span className="font-bold">{e.titre}</span> {e.texte}
+
+        <Repere>
+          Cinq entretiens avec ceux qui font le travail, dans vos locaux ou à
+          distance
+        </Repere>
+        <ol className="mt-3 border-t border-sable">
+          {entretiens.map((e, i) => (
+            <li
+              key={e.titre}
+              className="grid grid-cols-[2.5rem_minmax(0,1fr)] py-3 border-b border-sable text-base leading-relaxed"
+            >
+              <span className="text-sm font-bold text-terre pt-0.5">
+                E{i + 1}
+              </span>
+              <span>
+                <span className="font-bold">{e.titre}</span> {e.texte}
+              </span>
             </li>
           ))}
         </ol>
-        <h4 className="mt-8 font-serif text-xl font-bold">Ce que vous recevez</h4>
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-          {livrables.map((l) => (
-            <div key={l.titre}>
-              <p className="font-bold">{l.titre}</p>
-              <p className="mt-1 text-base leading-relaxed">{l.texte}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6 text-base leading-relaxed">
-          Ce dossier vous appartient, quelle que soit votre décision : réaliser
-          la solution ou vous arrêter là. Et si le cadrage montre qu&apos;un
-          réglage de vos logiciels suffit, le dossier le dit.
+
+        <Repere>Ce que vous recevez</Repere>
+        <TroisColonnes items={livrables} />
+
+        <p className="mt-8 max-w-[62ch] bg-white border-l-2 border-argile px-5 py-4 text-base leading-relaxed">
+          <strong>Ce dossier vous appartient, quelle que soit votre décision</strong>{" "}
+          : réaliser la solution ou vous arrêter là.
         </p>
-      </Card>
+      </div>
 
       {/* Étape 2 */}
-      <Card variant="on-ecru" className="mt-8 border-t-3 border-or">
-        <p className="font-sans text-sm font-bold uppercase tracking-wide text-terre">
-          Étape 2
-        </p>
-        <h3 className="mt-1 font-serif text-2xl font-bold">
+      <div className="mt-14 border-t border-brun pt-6">
+        <h3 className="font-serif text-2xl lg:text-3xl font-bold">
+          <span className="mr-3 align-middle font-sans text-sm font-bold text-terre">
+            Étape 2
+          </span>
           La réalisation, brique par brique
         </h3>
         <Fiche
           items={[
-            { label: "Prix", valeur: "5 000 € HT par brique" },
+            { label: "Prix", valeur: "5 000 € HT par brique" },
             { label: "Durée", valeur: "Deux mois par brique" },
             {
               label: "Règlement",
-              valeur: "20 % au départ, 80 % à la mise en service",
+              valeur: "20 % au départ, 80 % à la mise en service",
             },
           ]}
         />
-        <p className="mt-6 text-base leading-relaxed">
-          Une brique, c&apos;est une ou plusieurs fonctionnalités qui agissent
-          directement sur un de vos process existants et apportent seules un
-          gain à votre métier. Le premier mois, vous la manipulez déjà sur vos
-          données. Le second mois, elle est mise en service, documentée et
-          prise en main par vos équipes. Elle est validée sur des critères
-          écrits au devis.
+        <p className="mt-6 max-w-[62ch] text-base leading-relaxed">
+          Votre solution se construit par briques. Une brique, c&apos;est une
+          ou plusieurs fonctionnalités qui agissent directement sur un de vos
+          process existants. Chacune fonctionne seule.
         </p>
-        <h4 className="mt-8 font-serif text-xl font-bold">
-          Des exemples de briques
-        </h4>
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <Repere>Une brique, en deux mois</Repere>
+        <TroisColonnes items={deuxMois} />
+
+        <Repere>Des exemples de briques</Repere>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {briques.map((b) => (
-            <div key={b.titre} className="bg-ecru rounded-lg p-4">
-              <p className="font-bold">{b.titre}</p>
+            <div key={b.titre} className="border border-sable bg-white p-5">
+              <h4 className="font-serif text-lg font-bold">{b.titre}</h4>
               <p className="mt-1 text-base leading-relaxed">{b.texte}</p>
             </div>
           ))}
         </div>
-      </Card>
-
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h3 className="font-serif text-xl font-bold">Aucun dépassement</h3>
-          <p className="mt-2 text-base leading-relaxed">
-            Le prix d&apos;une brique ne bouge pas. Un besoin nouveau donne un
-            nouveau devis, jamais une facture surprise.
-          </p>
-        </div>
-        <div>
-          <h3 className="font-serif text-xl font-bold">
-            Une décision à chaque étape
-          </h3>
-          <p className="mt-2 text-base leading-relaxed">
-            Après le cadrage, après chaque brique : vous continuez, vous
-            attendez ou vous arrêtez. Ce qui est livré fonctionne et vous
-            appartient.
-          </p>
-        </div>
+        <p className="mt-4 text-sm leading-relaxed">
+          La plus coûteuse vient d&apos;abord, et vous pouvez vous arrêter après
+          chacune : ce qui est livré fonctionne et vous appartient.
+        </p>
       </div>
-    </Section>
+    </LabeledSection>
   );
 }

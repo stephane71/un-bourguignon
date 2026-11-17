@@ -4,7 +4,7 @@
   --color-ecru: #F5F0E8;
   --color-sable: #E8DCC8;
   --color-brun: #6B4C3B;
-  --color-terre: #8B6914;
+  --color-terre: #7D5F12;
   --color-or: #C5973B;
   --color-or-light: #D4A574;
   --color-argile: #B8754C;
@@ -20,7 +20,7 @@
   --color-ecru: #F5F0E8;
   --color-sable: #E8DCC8;
   --color-brun: #6B4C3B;
-  --color-terre: #8B6914;
+  --color-terre: #7D5F12;
   --color-or: #C5973B;
   --color-or-light: #D4A574;
   --color-argile: #B8754C;
@@ -84,4 +84,113 @@ html {
 
 section[id] {
   scroll-margin-top: 5rem;
+}
+
+/* Frise des étapes : un segment par étape, une cote pour sa durée,
+   un losange pour chaque point de décision. */
+.chain {
+  display: flex;
+  align-items: stretch;
+  margin-top: 8px;
+  border-bottom: 1px solid var(--color-brun);
+}
+.seg {
+  position: relative;
+  min-width: 0;
+  padding: 0 14px 18px;
+  border-left: 1px solid var(--color-sable);
+}
+.seg:first-child {
+  border-left-color: var(--color-brun);
+}
+.seg-1 {
+  flex: 1 1 0;
+}
+.seg-2 {
+  flex: 2 1 0;
+}
+.seg-open {
+  border-right: 1px dashed var(--color-sable);
+}
+.seg + .seg::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  bottom: -6px;
+  width: 11px;
+  height: 11px;
+  background: var(--color-ecru);
+  border: 1px solid var(--color-brun);
+  transform: rotate(45deg);
+}
+.cote {
+  position: relative;
+  height: 1px;
+  margin: 30px -14px 22px;
+  background: var(--color-argile);
+}
+.cote::before,
+.cote::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 1px;
+  height: 15px;
+  background: var(--color-argile);
+  transform: rotate(45deg);
+}
+.cote::before {
+  left: 0;
+}
+.cote::after {
+  right: 0;
+}
+.cote span {
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--color-terre);
+  white-space: nowrap;
+}
+@media (max-width: 639px) {
+  .chain {
+    flex-direction: column;
+    border-bottom: 0;
+    border-left: 1px solid var(--color-brun);
+  }
+  .seg,
+  .seg:first-child {
+    border-left: 0;
+    border-top: 1px solid var(--color-sable);
+    padding: 0 0 16px 18px;
+  }
+  .seg:first-child {
+    border-top: 0;
+  }
+  .seg-open {
+    border-right: 0;
+    border-bottom: 1px dashed var(--color-sable);
+  }
+  .seg + .seg::after {
+    left: -6px;
+    top: -6px;
+    bottom: auto;
+  }
+  .cote {
+    margin: 30px 0 16px;
+  }
+}
+
+/* Repère en biais devant chaque signe de la liste « Pour qui » */
+.signe::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 1.45em;
+  width: 13px;
+  height: 1px;
+  background: var(--color-argile);
+  transform: rotate(-45deg);
 }

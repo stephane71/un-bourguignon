@@ -1,4 +1,4 @@
-import { Section } from "@/components/ui/Section";
+import { LabeledSection } from "@/components/ui/LabeledSection";
 
 const questions = [
   {
@@ -29,26 +29,21 @@ const questions = [
 
 export function FaqSection() {
   return (
-    <Section id="questions" alternate>
-      <h2 className="font-serif text-xl lg:text-4xl font-bold">
-        Ce que les dirigeants demandent avant de signer
-      </h2>
-      <div className="mt-8 max-w-3xl divide-y divide-sable border-y border-sable">
+    <LabeledSection
+      id="questions"
+      label="Questions"
+      title="Ce que les dirigeants demandent avant de signer."
+    >
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 md:gap-x-12">
         {questions.map((item) => (
-          <details key={item.q} className="group py-4">
-            <summary className="cursor-pointer list-none font-serif text-lg font-bold flex items-start justify-between gap-4 min-h-12 items-center focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2 rounded">
+          <div key={item.q} className="py-5 border-t border-sable min-w-0">
+            <h3 className="font-serif text-lg font-bold leading-snug">
               {item.q}
-              <span
-                aria-hidden="true"
-                className="text-argile text-2xl leading-none group-open:rotate-45 transition-transform"
-              >
-                +
-              </span>
-            </summary>
+            </h3>
             <p className="mt-2 text-base leading-relaxed">{item.r}</p>
-          </details>
+          </div>
         ))}
       </div>
-    </Section>
+    </LabeledSection>
   );
 }

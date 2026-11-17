@@ -11,7 +11,7 @@ const NAV_LINKS = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white">
+    <header className="sticky top-0 z-50 bg-ecru border-b border-sable">
       <Container className="flex items-center justify-between h-16 lg:h-20">
         {/* Brand */}
         <a href="/" className="font-serif text-xl font-bold text-brun">

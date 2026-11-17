@@ -1,4 +1,4 @@
-import { Section } from "@/components/ui/Section";
+import { LabeledSection } from "@/components/ui/LabeledSection";
 
 const signes = [
   "Une même information est saisie deux ou trois fois : dans le devis, le tableur, puis le logiciel comptable.",
@@ -12,28 +12,25 @@ const signes = [
 
 export function PourQuiSection() {
   return (
-    <Section id="pour-qui" alternate>
-      <h2 className="font-serif text-xl lg:text-4xl font-bold">
-        Vous êtes au bon endroit si…
-      </h2>
-      <p className="mt-4 text-base leading-relaxed max-w-3xl">
-        Je travaille avec les dirigeants de PME qui produisent, le plus souvent
-        de 3 à 10 salariés, quel que soit le secteur : atelier, fabrication,
-        production alimentaire, agriculture, bâtiment, services.
-      </p>
-      <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <LabeledSection
+      id="pour-qui"
+      label="Pour qui"
+      title="Vous êtes au bon endroit si…"
+      intro="Je travaille avec les dirigeants de PME qui produisent, le plus souvent de 3 à 10 salariés, quel que soit le secteur : atelier, fabrication, production alimentaire, agriculture, bâtiment, services."
+    >
+      <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 md:gap-x-10 border-t border-sable">
         {signes.map((signe) => (
           <li
             key={signe}
-            className="bg-white rounded-xl p-5 border-l-4 border-or text-base leading-relaxed"
+            className="signe relative py-4 pl-7 border-b border-sable text-base leading-relaxed"
           >
             {signe}
           </li>
         ))}
       </ul>
-      <p className="mt-8 font-serif text-xl font-bold">
+      <p className="mt-7 font-serif text-xl italic max-w-[50ch]">
         Deux de ces phrases décrivent votre entreprise ? Parlons-en.
       </p>
-    </Section>
+    </LabeledSection>
   );
 }

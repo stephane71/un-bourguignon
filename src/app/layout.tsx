@@ -17,9 +17,9 @@ const instrumentSans = Instrument_Sans({
 });
 
 const siteTitle =
-  "Gestion sur mesure pour les PME de production | Stéphane Maire";
+  "Gestion sur mesure pour PME de production | Stéphane Maire";
 const siteDescription =
-  "Votre gestion vous coûte des heures chaque semaine. Un mois de cadrage à 3 000 € HT, puis une solution sur mesure par briques. Partout en France.";
+  "Votre gestion vous coûte des heures chaque semaine. Un mois de cadrage à 3 000 € HT, puis un logiciel de gestion sur mesure, par briques. Partout en France.";
 const siteUrl = "https://un-bourguignon.com";
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
   },

@@ -27,7 +27,7 @@ const indicateurs = [
 export function CasSection() {
   return (
     <Section id="cas">
-      <p className="font-sans text-sm font-bold uppercase tracking-wide text-argile">
+      <p className="font-sans text-sm font-bold uppercase tracking-wide text-terre">
         Un cas réel
       </p>
       <h2 className="mt-1 font-serif text-xl lg:text-4xl font-bold">

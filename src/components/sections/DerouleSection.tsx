@@ -102,7 +102,7 @@ export function DerouleSection() {
 
       {/* Étape 1 */}
       <Card variant="on-ecru" className="mt-10 border-t-3 border-or">
-        <p className="font-sans text-sm font-bold uppercase tracking-wide text-argile">
+        <p className="font-sans text-sm font-bold uppercase tracking-wide text-terre">
           Étape 1
         </p>
         <h3 className="mt-1 font-serif text-2xl font-bold">Le cadrage</h3>
@@ -119,7 +119,7 @@ export function DerouleSection() {
           entretiens avec ceux qui font le travail, dans vos locaux ou à
           distance :
         </p>
-        <ol className="mt-4 space-y-2 text-base leading-relaxed list-decimal list-inside marker:font-bold marker:text-argile">
+        <ol className="mt-4 space-y-2 text-base leading-relaxed list-decimal list-inside marker:font-bold marker:text-terre">
           {entretiens.map((e) => (
             <li key={e.titre}>
               <span className="font-bold">{e.titre}</span> {e.texte}
@@ -144,7 +144,7 @@ export function DerouleSection() {
 
       {/* Étape 2 */}
       <Card variant="on-ecru" className="mt-8 border-t-3 border-or">
-        <p className="font-sans text-sm font-bold uppercase tracking-wide text-argile">
+        <p className="font-sans text-sm font-bold uppercase tracking-wide text-terre">
           Étape 2
         </p>
         <h3 className="mt-1 font-serif text-2xl font-bold">

@@ -6,10 +6,10 @@ import { Burger } from "@/components/icons/Burger";
 import { Close } from "@/components/icons/Close";
 
 const NAV_LINKS = [
-  { label: "Pour qui", href: "#pour-qui" },
-  { label: "Déroulé et prix", href: "#deroule" },
-  { label: "Un cas réel", href: "#cas" },
-  { label: "Qui suis-je", href: "#a-propos" },
+  { label: "Pour qui", href: "/#pour-qui" },
+  { label: "Déroulé et prix", href: "/#deroule" },
+  { label: "Un cas réel", href: "/#cas" },
+  { label: "Qui suis-je", href: "/#a-propos" },
 ];
 
 export function MobileMenu() {
@@ -88,7 +88,7 @@ export function MobileMenu() {
               {link.label}
             </a>
           ))}
-          <Button as="a" href="#contact" onClick={close}>
+          <Button as="a" href="/#contact" onClick={close}>
             Premier échange
           </Button>
         </nav>

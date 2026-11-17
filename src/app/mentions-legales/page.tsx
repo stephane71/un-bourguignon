@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Mentions légales — Stéphane Maire",
+  title: "Mentions légales | Stéphane Maire",
   description: "Mentions légales du site un-bourguignon.com",
+  alternates: { canonical: "/mentions-legales" },
+  openGraph: {
+    title: "Mentions légales | Stéphane Maire",
+    description: "Mentions légales du site un-bourguignon.com",
+    url: "/mentions-legales",
+  },
 };
 
 export default function MentionsLegales() {

@@ -32,13 +32,13 @@ export function Footer() {
             <Facebook size={20} />
           </a>
         </div>
-        <a href="tel:+33662461643" className={focusClassName}>
+        <a href="tel:+33662461643" className={`${focusClassName} py-1`}>
           06 62 46 16 43
         </a>
-        <a href="mailto:stephane@un-bourguignon.com" className={focusClassName}>
+        <a href="mailto:stephane@un-bourguignon.com" className={`${focusClassName} py-1`}>
           stephane@un-bourguignon.com
         </a>
-        <a href="/mentions-legales" className={`${focusClassName} text-white/60 text-xs mt-2`}>
+        <a href="/mentions-legales" className={`${focusClassName} text-white/80 text-xs mt-2 py-1`}>
           Mentions légales
         </a>
       </Container>

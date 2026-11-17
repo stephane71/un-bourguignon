@@ -11,8 +11,8 @@ export function BeneficesSection() {
         Ce que vous gagnez
       </h2>
       <p className="mt-4 text-base leading-relaxed max-w-3xl">
-        Une solution qui fait à votre place ce que vos équipes font à la main,
-        construite autour de vos étapes, de vos règles, de vos exceptions et de
+        Une solution de gestion sur mesure, qui fait à votre place ce que vos
+        équipes font à la main, construite autour de vos étapes, de vos règles, de vos exceptions et de
         votre vocabulaire.
       </p>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">

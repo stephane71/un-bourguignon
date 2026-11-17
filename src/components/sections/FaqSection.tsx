@@ -3,7 +3,7 @@ import { LabeledSection } from "@/components/ui/LabeledSection";
 const questions = [
   {
     q: "Et si le cadrage montre qu'il ne faut rien construire ?",
-    r: "Le dossier le dit. Parfois, un réglage de vos logiciels ou un logiciel du marché suffit : le dossier vous le recommande.",
+    r: "Parfois, un réglage de vos logiciels ou un logiciel du marché suffit : le dossier vous le recommande.",
   },
   {
     q: "Pourquoi du sur mesure plutôt qu'un logiciel du marché ?",

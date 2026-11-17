@@ -9,6 +9,9 @@ export function Footer() {
   return (
     <footer className="bg-brun text-white py-6">
       <Container className="flex flex-col items-start gap-1.5 text-sm leading-relaxed">
+        <p className="font-serif text-base font-bold">
+          Gestion sur mesure, par Stéphane Maire
+        </p>
         <div className="flex items-center gap-3 mb-1">
           <a
             href="https://www.linkedin.com/in/stephanemaire71"
@@ -32,8 +35,8 @@ export function Footer() {
         <a href="tel:+33662461643" className={focusClassName}>
           06 62 46 16 43
         </a>
-        <a href="mailto:stephane-ei@un-bourguignon.com" className={focusClassName}>
-          stephane-ei@un-bourguignon.com
+        <a href="mailto:stephane@un-bourguignon.com" className={focusClassName}>
+          stephane@un-bourguignon.com
         </a>
         <a href="/mentions-legales" className={`${focusClassName} text-white/60 text-xs mt-2`}>
           Mentions légales

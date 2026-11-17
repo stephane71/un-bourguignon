@@ -9,11 +9,12 @@ export function ContactSection() {
     <Section id="contact">
       <div className="max-w-md mx-auto text-center">
         <h2 className="font-serif text-xl lg:text-4xl font-bold">
-          Prêt à travailler ensemble ?
+          Un premier échange, gratuit
         </h2>
         <p className="mt-4 text-base leading-relaxed">
-          Pour un premier échange sans engagement, contactez-moi
-          directement :
+          Par téléphone ou en visioconférence. Vous me décrivez ce qui prend
+          du temps dans votre gestion. À l&apos;issue de cet échange, vous
+          savez si un cadrage est utile à votre entreprise.
         </p>
 
         <div className="mt-8 flex flex-col gap-4">
@@ -26,11 +27,11 @@ export function ContactSection() {
           </a>
 
           <a
-            href="mailto:stephane-ei@un-bourguignon.com"
+            href="mailto:stephane@un-bourguignon.com"
             className="flex items-center justify-center gap-3 min-h-12 w-full border border-brun text-brun rounded-lg px-6 py-3 font-sans font-bold text-base hover:bg-ecru transition-colors focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2"
           >
             <Mail size={20} />
-            stephane-ei@un-bourguignon.com
+            stephane@un-bourguignon.com
           </a>
         </div>
 

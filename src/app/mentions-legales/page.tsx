@@ -39,10 +39,10 @@ export default function MentionsLegales() {
               <dt className="font-semibold inline">Email : </dt>
               <dd className="inline">
                 <a
-                  href="mailto:stephane-ei@un-bourguignon.com"
+                  href="mailto:stephane@un-bourguignon.com"
                   className="text-brun underline"
                 >
-                  stephane-ei@un-bourguignon.com
+                  stephane@un-bourguignon.com
                 </a>
               </dd>
             </div>

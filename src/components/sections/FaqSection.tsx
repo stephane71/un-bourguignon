@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 const questions = [
   {
     q: "Et si le cadrage montre qu'il ne faut rien construire ?",
-    r: "Le dossier le dit. Parfois, un réglage de vos logiciels ou un logiciel du marché suffit : le dossier vous le recommande, et il vous appartient.",
+    r: "Le dossier le dit. Parfois, un réglage de vos logiciels ou un logiciel du marché suffit : le dossier vous le recommande.",
   },
   {
     q: "Pourquoi du sur mesure plutôt qu'un logiciel du marché ?",
@@ -23,7 +23,7 @@ const questions = [
   },
   {
     q: "Où intervenez-vous ?",
-    r: "Dans vos locaux en Saône-et-Loire, et à distance partout en France métropolitaine.",
+    r: "Partout en France métropolitaine : dans vos locaux, et à distance.",
   },
 ];
 

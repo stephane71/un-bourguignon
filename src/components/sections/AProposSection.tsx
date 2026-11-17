@@ -32,9 +32,9 @@ export function AProposSection() {
         />
       <div className="max-w-3xl space-y-6">
         <p className="text-base leading-relaxed">
-          Je suis Stéphane Maire, entrepreneur individuel installé à Moroges,
-          en Saône-et-Loire. Avant de m&apos;installer ici, j&apos;ai travaillé
-          en start-up à Paris, à concevoir des logiciels.
+          Je suis Stéphane Maire, ingénieur logiciel. Pendant plus de 15 ans à
+          Paris, j&apos;ai conçu et développé des logiciels sur des sujets liés
+          à la finance, aux réseaux et à la vente.
         </p>
         <p className="text-base leading-relaxed">
           Je commence toujours par écouter ceux qui font le travail, à leur
@@ -42,8 +42,8 @@ export function AProposSection() {
           service, vous avez un seul interlocuteur, qui connaît votre métier.
         </p>
         <p className="text-base leading-relaxed">
-          Je me déplace dans vos locaux en Saône-et-Loire et je travaille à
-          distance partout en France métropolitaine.
+          Je me déplace dans vos locaux et je travaille à distance, partout
+          en France métropolitaine.
         </p>
       </div>
       </div>

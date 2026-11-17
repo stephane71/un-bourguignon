@@ -19,7 +19,7 @@ const instrumentSans = Instrument_Sans({
 const siteTitle =
   "Gestion sur mesure pour les PME de production | Stéphane Maire";
 const siteDescription =
-  "Votre gestion vous coûte des heures chaque semaine. Un mois de cadrage à 3 000 € HT, puis une solution sur mesure par briques. Basé en Saône-et-Loire.";
+  "Votre gestion vous coûte des heures chaque semaine. Un mois de cadrage à 3 000 € HT, puis une solution sur mesure par briques. Partout en France.";
 const siteUrl = "https://un-bourguignon.com";
 
 export const metadata: Metadata = {
@@ -61,10 +61,7 @@ const jsonLd = {
     addressRegion: "Saône-et-Loire",
     addressCountry: "FR",
   },
-  areaServed: [
-    { "@type": "AdministrativeArea", name: "Saône-et-Loire" },
-    { "@type": "Country", name: "France" },
-  ],
+  areaServed: { "@type": "Country", name: "France" },
   founder: {
     "@type": "Person",
     name: "Stéphane Maire",

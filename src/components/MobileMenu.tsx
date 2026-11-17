@@ -6,10 +6,10 @@ import { Burger } from "@/components/icons/Burger";
 import { Close } from "@/components/icons/Close";
 
 const NAV_LINKS = [
-  { label: "A propos", href: "#a-propos" },
-  { label: "Services", href: "#services" },
-  { label: "Methode", href: "#methode" },
-  { label: "Contact", href: "#contact" },
+  { label: "Pour qui", href: "/#pour-qui" },
+  { label: "Déroulé et prix", href: "/#deroule" },
+  { label: "Un cas réel", href: "/#cas" },
+  { label: "Qui suis-je", href: "/#a-propos" },
 ];
 
 export function MobileMenu() {
@@ -72,7 +72,7 @@ export function MobileMenu() {
         role="dialog"
         aria-modal="true"
         aria-label="Menu de navigation"
-        className={`fixed inset-0 top-16 z-40 bg-white ${isOpen ? "motion-safe:transition-opacity duration-200 opacity-100" : "hidden"}`}
+        className={`fixed inset-0 top-16 z-40 bg-ecru ${isOpen ? "motion-safe:transition-opacity duration-200 opacity-100" : "hidden"}`}
       >
         <nav
           className="flex flex-col items-center justify-center h-full gap-8"
@@ -88,8 +88,8 @@ export function MobileMenu() {
               {link.label}
             </a>
           ))}
-          <Button as="a" href="#contact" onClick={close}>
-            Me contacter
+          <Button as="a" href="/#contact" onClick={close}>
+            Premier échange
           </Button>
         </nav>
       </div>

@@ -3,19 +3,19 @@ import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/MobileMenu";
 
 const NAV_LINKS = [
-  { label: "A propos", href: "#a-propos" },
-  { label: "Services", href: "#services" },
-  { label: "Methode", href: "#methode" },
-  { label: "Contact", href: "#contact" },
+  { label: "Pour qui", href: "/#pour-qui" },
+  { label: "Déroulé et prix", href: "/#deroule" },
+  { label: "Un cas réel", href: "/#cas" },
+  { label: "Qui suis-je", href: "/#a-propos" },
 ];
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white">
+    <header className="sticky top-0 z-50 bg-ecru border-b border-sable">
       <Container className="flex items-center justify-between h-16 lg:h-20">
         {/* Brand */}
-        <a href="#" className="font-serif text-xl font-bold text-brun">
-          Stephane Maire
+        <a href="/" className="font-serif text-xl font-bold text-brun">
+          Stéphane Maire
         </a>
 
         {/* Desktop nav -- hidden on mobile */}
@@ -32,8 +32,8 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <Button as="a" href="#contact">
-            Me contacter
+          <Button as="a" href="/#contact">
+            Premier échange
           </Button>
         </nav>
 

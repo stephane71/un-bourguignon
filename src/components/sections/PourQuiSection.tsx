@@ -1,47 +1,36 @@
-import { Section } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
+import { LabeledSection } from "@/components/ui/LabeledSection";
+
+const signes = [
+  "Une même information est saisie deux ou trois fois : dans le devis, le tableur, puis le logiciel comptable.",
+  "Un tableur fait tourner l'entreprise, et une seule personne sait le tenir.",
+  "Vos équipes vérifient à la main des documents justes neuf fois sur dix.",
+  "Le papier circule encore : imprimer, tamponner, classer, scanner.",
+  "Votre logiciel fait l'essentiel, le reste se fait à côté, à la main.",
+  "Quand la personne qui sait est absente, tout ralentit.",
+  "Personne ne sait combien d'heures la gestion prend chaque semaine.",
+];
 
 export function PourQuiSection() {
   return (
-    <Section id="pour-qui">
-      <h2 className="font-serif text-xl lg:text-4xl font-bold">Pour qui ?</h2>
-      <p className="mt-4 text-base leading-relaxed max-w-3xl">
-        J'accompagne les micro-entrepreneurs et les entreprises individuelles qui gèrent seuls
-        leur activité : le métier, les clients, et tout l'administratif. Qu'ils soient artisans,
-        commerçants de marché, prestataires de services ou en cours de reconversion, ils partagent
-        les mêmes défis face au numérique.
+    <LabeledSection
+      id="pour-qui"
+      label="Pour qui"
+      title="Vous êtes au bon endroit si…"
+      intro="Je travaille avec les dirigeants de PME qui produisent, le plus souvent de 3 à 10 salariés, quel que soit le secteur : atelier, fabrication, production alimentaire, agriculture, bâtiment, services."
+    >
+      <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 md:gap-x-10 border-t border-sable">
+        {signes.map((signe) => (
+          <li
+            key={signe}
+            className="signe relative py-4 pl-7 border-b border-sable text-base leading-relaxed"
+          >
+            {signe}
+          </li>
+        ))}
+      </ul>
+      <p className="mt-7 font-serif text-xl italic max-w-[50ch]">
+        Deux de ces phrases décrivent votre entreprise ? Parlons-en.
       </p>
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card variant="on-white">
-          <h3 className="font-serif text-xl font-bold">Des outils qui s'imposent sans explication</h3>
-          <p className="mt-2 text-base leading-relaxed">
-            Logiciels de caisse, plateformes de déclaration, messageries professionnelles…
-            Les outils numériques se multiplient sans que personne n'explique comment les
-            choisir ni comment les utiliser efficacement.
-          </p>
-        </Card>
-        <Card variant="on-white">
-          <h3 className="font-serif text-xl font-bold">Des obligations administratives qui alourdissent le quotidien</h3>
-          <p className="mt-2 text-base leading-relaxed">
-            Facturation, suivi des devis, déclarations — autant de tâches chronophages qui
-            empiètent sur le temps du métier et créent un stress permanent.
-          </p>
-        </Card>
-        <Card variant="on-white">
-          <h3 className="font-serif text-xl font-bold">Une présence en ligne difficile à construire seul</h3>
-          <p className="mt-2 text-base leading-relaxed">
-            Savoir qu'il faut être visible sur Google ou les réseaux sociaux, c'est une chose.
-            Savoir comment faire, avec quel outil, et en combien de temps — c'en est une autre.
-          </p>
-        </Card>
-        <Card variant="on-white">
-          <h3 className="font-serif text-xl font-bold">Pas d'interlocuteur de confiance</h3>
-          <p className="mt-2 text-base leading-relaxed">
-            Les grandes agences sont trop chères, les amis qui s'y connaissent pas toujours
-            disponibles, et les tutoriels en ligne rarement adaptés à une activité de terrain.
-          </p>
-        </Card>
-      </div>
-    </Section>
+    </LabeledSection>
   );
 }

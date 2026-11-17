@@ -17,9 +17,9 @@ const instrumentSans = Instrument_Sans({
 });
 
 const siteTitle =
-  "Stéphane Maire — Consultant numérique de proximité | Saône-et-Loire";
+  "Gestion sur mesure pour PME de production | Stéphane Maire";
 const siteDescription =
-  "Consultant numérique indépendant en Saône-et-Loire pour artisans, commerçants et TPE. Facturation électronique, outils de gestion, présence en ligne, formation IA. Contactez-moi au 06 62 46 16 43.";
+  "Votre gestion vous coûte des heures chaque semaine. Un mois de cadrage à 3 000 € HT, puis un logiciel de gestion sur mesure, par briques. Partout en France.";
 const siteUrl = "https://un-bourguignon.com";
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
   },
@@ -43,13 +43,15 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   name: "Stéphane Maire",
-  jobTitle: "Consultant numérique de proximité",
+  alternateName: "Gestion sur mesure",
   description:
-    "Consultant numérique indépendant pour artisans, commerçants et petits entrepreneurs en Saône-et-Loire et partout en France.",
+    "Solutions de gestion sur mesure pour les PME de production : un mois de cadrage pour mesurer, puis une réalisation par briques de deux mois, à prix ferme.",
+  slogan: "Un mois pour mesurer. Deux mois par brique pour construire.",
+  image: "https://un-bourguignon.com/images/photo-portrait.png",
   telephone: "+33662461643",
-  email: "stephane-ei@un-bourguignon.com",
+  email: "stephane@un-bourguignon.com",
   url: "https://un-bourguignon.com",
   address: {
     "@type": "PostalAddress",
@@ -59,20 +61,48 @@ const jsonLd = {
     addressRegion: "Saône-et-Loire",
     addressCountry: "FR",
   },
-  areaServed: {
-    "@type": "Country",
-    name: "France",
+  areaServed: { "@type": "Country", name: "France" },
+  founder: {
+    "@type": "Person",
+    name: "Stéphane Maire",
   },
   sameAs: [
     "https://www.linkedin.com/in/stephanemaire71",
     "https://www.facebook.com/stephane.maire1",
   ],
   knowsAbout: [
+    "Logiciel de gestion sur mesure",
+    "Automatisation de la gestion",
     "Facturation électronique",
-    "Outils numériques de gestion",
-    "Présence en ligne locale",
-    "Formation intelligence artificielle",
-    "Création d'outils personnalisés",
+    "Suivi de production",
+    "Tableau de bord du dirigeant",
+  ],
+  makesOffer: [
+    {
+      "@type": "Offer",
+      name: "Cadrage",
+      description:
+        "Un mois, cinq entretiens : dossier d'audit chiffré, maquette sur données réelles, devis ferme par briques.",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        price: 3000,
+        priceCurrency: "EUR",
+        valueAddedTaxIncluded: false,
+      },
+    },
+    {
+      "@type": "Offer",
+      name: "Réalisation d'une brique",
+      description:
+        "Deux mois par brique : une ou plusieurs fonctionnalités qui agissent sur un process existant, mises en service et documentées.",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: 5000,
+        priceCurrency: "EUR",
+        valueAddedTaxIncluded: false,
+        unitText: "brique",
+      },
+    },
   ],
 };
 

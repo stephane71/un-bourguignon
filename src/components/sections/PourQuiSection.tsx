@@ -34,11 +34,6 @@ export function PourQuiSection() {
       <p className="mt-8 font-serif text-xl font-bold">
         Deux de ces phrases décrivent votre entreprise ? Parlons-en.
       </p>
-      <p className="mt-6 text-base leading-relaxed max-w-3xl">
-        Vous travaillez seul, en micro-entreprise ou en entreprise
-        individuelle ? Appelez-moi aussi : je vous dirai franchement si je
-        peux vous être utile.
-      </p>
     </Section>
   );
 }

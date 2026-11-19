@@ -4,68 +4,29 @@ import { LinkedIn } from "@/components/icons/LinkedIn";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/stephanemaire71";
 
-const reperes = [
+/**
+ * Ce qu'un dirigeant doit retenir de l'expérience (profil LinkedIn, hors
+ * activité indépendante actuelle) : des apports, pas un CV.
+ */
+const apports = [
   {
-    titre: "Plus de 15 ans",
+    titre: "Plus de 15 ans de métier",
     texte:
-      "de conception et de développement de logiciels, à Paris puis à distance : finance, réseaux, sécurité, vente.",
+      "Dans des grands groupes et de jeunes entreprises, j'ai conçu et construit des logiciels dont des équipes se servent au quotidien : finance, sécurité, vente, réseaux.",
   },
   {
-    titre: "Un seul interlocuteur",
+    titre: "La technique rendue simple",
     texte:
-      "Je mène moi-même chaque étape, du premier échange à la maintenance.",
+      "Rendre une plateforme financière utilisable par les équipes métier, donner à un responsable un tableau de bord lisible : mon travail consiste à rendre les logiciels simples pour ceux qui ne sont pas informaticiens.",
   },
   {
-    titre: "Partout en France",
-    texte: "Dans vos locaux et à distance, en France métropolitaine.",
+    titre: "De bout en bout",
+    texte:
+      "J'ai déjà conçu et mis en ligne seul un service complet, de la collecte des données au site public. Chez vous, la même personne écoute, construit et maintient.",
   },
 ];
 
-/** Repris du profil LinkedIn (page Expérience), hors activité indépendante actuelle. */
-const parcours = [
-  {
-    periode: "2023 – 2025",
-    qui: "Zeliq",
-    quoi: "Plateforme de prospection commerciale",
-    texte:
-      "Arrivé dans les premiers mois du projet : mise en place de l'architecture, règles de travail communes, bibliothèque de composants partagée pour livrer plus vite, outils d'IA adoptés pour coder mieux et plus vite.",
-  },
-  {
-    periode: "2021 – 2022",
-    qui: "Thales",
-    quoi: "Cryptobox, stockage et partage de fichiers sécurisés",
-    texte:
-      "Dans une équipe de 10 personnes, responsable de l'interface : maintenance, nouvelles fonctionnalités, versions pour Windows et macOS, intégration du module de chiffrement.",
-  },
-  {
-    periode: "2019 – 2020",
-    qui: "Scaled Risk",
-    quoi: "Plateforme de données pour les institutions financières",
-    texte:
-      "Rendre la plateforme utilisable par les équipes métier, et construire des indicateurs qui aident un gestionnaire d'actifs à piloter son portefeuille.",
-  },
-  {
-    periode: "2017 – 2018",
-    qui: "La Foulée",
-    quoi: "Calendrier des courses à pied en France, projet personnel",
-    texte:
-      "Conçu et construit seul, de bout en bout : collecte automatique des événements, base de données, accès aux données, application web, référencement.",
-  },
-  {
-    periode: "2015 – 2017",
-    qui: "Wisembly",
-    quoi: "Solution d'animation de réunions et d'événements",
-    texte:
-      "Maintenance et évolution de l'application principale, puis une nouvelle application de tableau de bord et d'analyse pour les clients.",
-  },
-  {
-    periode: "2010 – 2015",
-    qui: "SFR",
-    quoi: "Plateforme de diffusion de contenus, en alternance",
-    texte:
-      "Tableau de bord des indicateurs de la plateforme, pour suivre la consommation et repérer les anomalies.",
-  },
-];
+const references = ["SFR", "Thales", "Scaled Risk", "Zeliq", "Wisembly"];
 
 const engagements = [
   {
@@ -84,9 +45,6 @@ const engagements = [
   },
 ];
 
-const lienClassName =
-  "inline-flex items-center gap-2 min-h-12 font-bold text-brun underline-offset-4 hover:underline focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2 rounded-sm";
-
 export function PresentationSection() {
   return (
     <section
@@ -97,25 +55,25 @@ export function PresentationSection() {
         <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-8 sm:gap-12">
           <div className="min-w-0">
             <p className="text-xs font-bold uppercase tracking-[0.12em] text-terre">
-              Logiciel et automatisations sur mesure
+              Logiciel et automatisations sur mesure · partout en France
             </p>
             <h1 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-[16ch]">
               Stéphane Maire, ingénieur logiciel.
             </h1>
             <p className="mt-6 max-w-[58ch] text-lg leading-relaxed">
-              Je conçois et je construis des logiciels et des automatisations
-              sur mesure pour les entreprises. Je pars de votre façon de
-              travailler, observée avec ceux qui font le travail, et je mesure
-              avant de construire.
+              Je construis des logiciels et des automatisations sur mesure pour
+              les entreprises qui perdent du temps dans leur gestion. J&apos;observe
+              d&apos;abord le travail avec ceux qui le font, je mesure ce
+              qu&apos;il coûte, puis je construis.
             </p>
             <a
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className={`mt-4 ${lienClassName}`}
+              className="mt-4 inline-flex items-center gap-2 min-h-12 font-bold text-brun underline-offset-4 hover:underline focus:outline-none focus:ring-2 focus:ring-brun focus:ring-offset-2 rounded-sm"
             >
               <LinkedIn size={18} />
-              Mon profil LinkedIn
+              Mon parcours sur LinkedIn
             </a>
           </div>
           <Image
@@ -128,54 +86,32 @@ export function PresentationSection() {
           />
         </div>
 
-        <dl className="mt-14 grid grid-cols-1 md:grid-cols-3 md:gap-x-10 border-t border-brun">
-          {reperes.map((r) => (
-            <div key={r.titre} className="py-5 border-b border-sable min-w-0">
-              <dt className="font-serif text-2xl font-bold">{r.titre}</dt>
-              <dd className="mt-1 text-base leading-relaxed">{r.texte}</dd>
+        <h2 className="mt-14 text-xs font-bold uppercase tracking-[0.12em] text-terre">
+          Ce que je vous apporte
+        </h2>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 md:gap-x-10 border-t border-brun">
+          {apports.map((a) => (
+            <div key={a.titre} className="py-5 border-b border-sable min-w-0">
+              <h3 className="font-serif text-xl lg:text-2xl font-bold leading-snug">
+                {a.titre}
+              </h3>
+              <p className="mt-2 text-base leading-relaxed">{a.texte}</p>
             </div>
           ))}
-        </dl>
+        </div>
 
-        <p className="mt-12 text-xs font-bold uppercase tracking-[0.12em] text-terre">
-          Mon parcours
+        <p className="mt-6 text-sm leading-relaxed">
+          <span className="font-bold uppercase tracking-[0.12em] text-xs text-terre mr-3">
+            J&apos;ai travaillé pour
+          </span>
+          <span className="font-serif text-lg font-bold">
+            {references.join(" · ")}
+          </span>
         </p>
-        <ol className="mt-4 border-t border-sable">
-          {parcours.map((p) => (
-            <li
-              key={p.qui}
-              className="grid grid-cols-1 md:grid-cols-[8rem_minmax(0,1fr)] gap-1 md:gap-6 py-4 border-b border-sable"
-            >
-              <span className="text-sm font-bold text-terre md:pt-1">
-                {p.periode}
-              </span>
-              <div className="min-w-0">
-                <p className="font-serif text-lg font-bold leading-snug">
-                  {p.qui}{" "}
-                  <span className="font-sans text-base font-normal">
-                    · {p.quoi}
-                  </span>
-                </p>
-                <p className="mt-1 max-w-[70ch] text-base leading-relaxed">
-                  {p.texte}
-                </p>
-              </div>
-            </li>
-          ))}
-        </ol>
-        <a
-          href={`${LINKEDIN_URL}/details/experience/`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`mt-2 ${lienClassName}`}
-        >
-          <LinkedIn size={18} />
-          Le détail de mon parcours sur LinkedIn
-        </a>
 
-        <p className="mt-12 text-xs font-bold uppercase tracking-[0.12em] text-terre">
+        <h2 className="mt-12 text-xs font-bold uppercase tracking-[0.12em] text-terre">
           Mes engagements
-        </p>
+        </h2>
         <dl className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
           {engagements.map((e) => (
             <div key={e.titre} className="border-t border-sable pt-4">

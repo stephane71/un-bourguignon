@@ -67,10 +67,7 @@ const jsonLd = {
     name: "Stéphane Maire",
     jobTitle: "Ingénieur logiciel",
   },
-  sameAs: [
-    "https://www.linkedin.com/in/stephanemaire71",
-    "https://www.facebook.com/stephane.maire1",
-  ],
+  sameAs: ["https://www.linkedin.com/in/stephanemaire71"],
   knowsAbout: [
     "Logiciel de gestion sur mesure",
     "Automatisation de la gestion",

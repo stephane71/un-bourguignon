@@ -92,6 +92,24 @@ const briques = [
   },
 ];
 
+const maintenance = [
+  {
+    titre: "En état de marche",
+    texte:
+      "La solution continue de faire, jour après jour, ce pour quoi chaque brique a été validée.",
+  },
+  {
+    titre: "Adaptée à votre activité",
+    texte:
+      "Un nouveau produit, une règle qui change, une équipe qui grandit : la solution suit votre entreprise.",
+  },
+  {
+    titre: "Par celui qui l'a construite",
+    texte:
+      "Je maintiens la solution que j'ai construite : je connais son fonctionnement et les règles de votre métier qu'elle applique.",
+  },
+];
+
 function Fiche({ items }: { items: { label: string; valeur: string }[] }) {
   return (
     <dl className="mt-5 grid grid-cols-1 sm:grid-cols-3 border border-sable bg-white">
@@ -136,7 +154,7 @@ export function DerouleSection() {
     <LabeledSection
       id="deroule"
       label="Le déroulé et les prix"
-      title="Mesurer d'abord, construire ensuite, brique par brique."
+      title="Mesurer d'abord, construire brique par brique, puis maintenir et faire évoluer."
     >
       {/* Étape 1 */}
       <div className="mt-8 border-t border-brun pt-6">
@@ -226,6 +244,35 @@ export function DerouleSection() {
         <p className="mt-4 text-sm leading-relaxed">
           La plus coûteuse vient d&apos;abord, et vous pouvez vous arrêter après
           chacune : ce qui est livré fonctionne et vous appartient.
+        </p>
+      </div>
+
+      {/* Étape 3 */}
+      <div className="mt-14 border-t border-brun pt-6">
+        <h3 className="font-serif text-2xl lg:text-3xl font-bold">
+          <span className="mr-3 align-middle font-sans text-sm font-bold text-terre">
+            Étape 3
+          </span>
+          La maintenance et l&apos;évolution
+        </h3>
+        <Fiche
+          items={[
+            { label: "Prix", valeur: "Chiffré à part, par contrat" },
+            { label: "Quand", valeur: "Après la mise en service d'une brique" },
+            { label: "Décision", valeur: "Vous décidez" },
+          ]}
+        />
+        <p className="mt-6 max-w-[62ch] text-base leading-relaxed">
+          La solution reste en état de marche et s&apos;adapte à mesure que
+          votre activité évolue.
+        </p>
+
+        <Repere>Ce que couvre cette étape</Repere>
+        <TroisColonnes items={maintenance} />
+        <p className="mt-4 text-sm leading-relaxed">
+          Le contrat et son prix vous sont proposés après la mise en service.
+          La solution vous appartient et continue de fonctionner si vous ne le
+          signez pas.
         </p>
       </div>
     </LabeledSection>

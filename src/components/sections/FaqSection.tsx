@@ -19,7 +19,7 @@ const questions = [
   },
   {
     q: "Que devient la solution une fois livrée ?",
-    r: "Elle vous appartient et continue de fonctionner : le code, les comptes et la documentation sont chez vous dès la première brique. Un contrat de maintenance et d'évolution peut l'adapter à mesure que votre activité évolue.",
+    r: "Elle vous appartient et continue de fonctionner : le code, les comptes et la documentation sont chez vous dès la première brique. La maintenance et l'évolution, troisième étape, vous sont proposées par contrat pour l'adapter à mesure que votre activité évolue : vous décidez.",
   },
   {
     q: "Où intervenez-vous ?",

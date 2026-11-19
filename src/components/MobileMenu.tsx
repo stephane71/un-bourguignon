@@ -4,15 +4,14 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/Button";
 import { Burger } from "@/components/icons/Burger";
 import { Close } from "@/components/icons/Close";
+import type { NavLink } from "@/components/navigation";
 
-const NAV_LINKS = [
-  { label: "Pour qui", href: "/#pour-qui" },
-  { label: "Déroulé et prix", href: "/#deroule" },
-  { label: "Un cas réel", href: "/#cas" },
-  { label: "Qui suis-je", href: "/#a-propos" },
-];
+interface MobileMenuProps {
+  links: NavLink[];
+  cta: NavLink;
+}
 
-export function MobileMenu() {
+export function MobileMenu({ links, cta }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -78,7 +77,7 @@ export function MobileMenu() {
           className="flex flex-col items-center justify-center h-full gap-8"
           aria-label="Navigation principale"
         >
-          {NAV_LINKS.map((link) => (
+          {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -88,8 +87,8 @@ export function MobileMenu() {
               {link.label}
             </a>
           ))}
-          <Button as="a" href="/#contact" onClick={close}>
-            Premier échange
+          <Button as="a" href={cta.href} onClick={close}>
+            {cta.label}
           </Button>
         </nav>
       </div>

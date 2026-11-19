@@ -17,9 +17,9 @@ const instrumentSans = Instrument_Sans({
 });
 
 const siteTitle =
-  "Gestion sur mesure pour PME de production | Stéphane Maire";
+  "Stéphane Maire, ingénieur logiciel | Logiciel et automatisations sur mesure";
 const siteDescription =
-  "Votre gestion vous coûte des heures chaque semaine. Un mois de cadrage à 3 000 € HT, puis un logiciel de gestion sur mesure, par briques. Partout en France.";
+  "Ingénieur logiciel depuis plus de 15 ans, je conçois des logiciels et des automatisations sur mesure pour les entreprises, dans vos locaux et à distance, partout en France.";
 const siteUrl = "https://un-bourguignon.com";
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ const jsonLd = {
   name: "Stéphane Maire",
   alternateName: "Gestion sur mesure",
   description:
-    "Solutions de gestion sur mesure pour les PME de production : un mois de cadrage pour mesurer, puis une réalisation par briques de deux mois, à prix ferme.",
+    "Solutions de gestion sur mesure pour les entreprises : un mois de cadrage pour mesurer, une réalisation par briques de deux mois à prix ferme, puis la maintenance et l'évolution. Un seul interlocuteur, du premier échange à la maintenance.",
   slogan: "Un mois pour mesurer. Deux mois par brique pour construire.",
   image: "https://un-bourguignon.com/images/photo-portrait.png",
   telephone: "+33662461643",
@@ -65,11 +65,9 @@ const jsonLd = {
   founder: {
     "@type": "Person",
     name: "Stéphane Maire",
+    jobTitle: "Ingénieur logiciel",
   },
-  sameAs: [
-    "https://www.linkedin.com/in/stephanemaire71",
-    "https://www.facebook.com/stephane.maire1",
-  ],
+  sameAs: ["https://www.linkedin.com/in/stephanemaire71"],
   knowsAbout: [
     "Logiciel de gestion sur mesure",
     "Automatisation de la gestion",
@@ -102,6 +100,12 @@ const jsonLd = {
         valueAddedTaxIncluded: false,
         unitText: "brique",
       },
+    },
+    {
+      "@type": "Offer",
+      name: "Maintenance et évolution",
+      description:
+        "Garder la solution en état de marche et l'adapter à l'évolution de l'activité. Proposée après la mise en service d'une brique, chiffrée à part, par contrat.",
     },
   ],
 };

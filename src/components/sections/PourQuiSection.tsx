@@ -16,7 +16,7 @@ export function PourQuiSection() {
       id="pour-qui"
       label="Pour qui"
       title="Vous êtes au bon endroit si…"
-      intro="Je travaille avec les dirigeants de PME qui produisent, le plus souvent de 3 à 10 salariés, quel que soit le secteur : atelier, fabrication, production alimentaire, agriculture, bâtiment, services."
+      intro="Je travaille avec les dirigeants d'entreprise, le plus souvent de 3 à 10 salariés, quel que soit le secteur : atelier, fabrication, production alimentaire, agriculture, bâtiment, commerce, services."
     >
       <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 md:gap-x-10 border-t border-sable">
         {signes.map((signe) => (

@@ -1,34 +1,18 @@
 import type { Metadata } from "next";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { PourQuiSection } from "@/components/sections/PourQuiSection";
-import { BeneficesSection } from "@/components/sections/BeneficesSection";
-import { SurMesureSection } from "@/components/sections/SurMesureSection";
-import { DerouleSection } from "@/components/sections/DerouleSection";
-import { AvanceSection } from "@/components/sections/AvanceSection";
-import { CasSection } from "@/components/sections/CasSection";
-import { GarantiesSection } from "@/components/sections/GarantiesSection";
-import { AProposSection } from "@/components/sections/AProposSection";
-import { FaqSection } from "@/components/sections/FaqSection";
-import { ContactSection } from "@/components/sections/ContactSection";
+import { PresentationSection } from "@/components/accueil/PresentationSection";
+import { PorteOffreSection } from "@/components/accueil/PorteOffreSection";
+import { AnciennesAncres } from "@/components/accueil/AnciennesAncres";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default function Home() {
+export default function Accueil() {
   return (
     <>
-      <HeroSection />
-      <PourQuiSection />
-      <BeneficesSection />
-      <SurMesureSection />
-      <DerouleSection />
-      <AvanceSection />
-      <CasSection />
-      <GarantiesSection />
-      <AProposSection />
-      <FaqSection />
-      <ContactSection />
+      <AnciennesAncres />
+      <PresentationSection />
+      <PorteOffreSection />
     </>
   );
 }

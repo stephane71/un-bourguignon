@@ -194,3 +194,108 @@ section[id] {
   background: var(--color-argile);
   transform: rotate(-45deg);
 }
+
+/* Étape 3 dans la frise : durée ouverte, cote en pointillés */
+.seg-3 {
+  flex: 1.6 1 0;
+}
+.seg-open + .seg-3 {
+  border-left-color: transparent;
+}
+.seg-3 .cote {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-argile) 0 5px,
+    transparent 5px 9px
+  );
+}
+.seg-3 .cote::after {
+  display: none;
+}
+.seg-3 p:first-of-type {
+  opacity: 0.8;
+}
+@media (max-width: 639px) {
+  .seg-open + .seg-3 {
+    border-top: 0;
+  }
+}
+
+/* Un seul interlocuteur : une cote qui couvre toutes les étapes */
+.relay-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-bottom: 1px solid var(--color-brun);
+}
+.relay-steps li {
+  min-width: 0;
+  padding: 0 12px 16px;
+  border-left: 1px solid var(--color-sable);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+.relay-steps li:first-child {
+  border-left-color: var(--color-brun);
+}
+.relay-cote {
+  position: relative;
+  height: 1px;
+  margin: 22px 0 36px;
+  background: var(--color-argile);
+}
+.relay-cote::before,
+.relay-cote::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 1px;
+  height: 15px;
+  background: var(--color-argile);
+  transform: rotate(45deg);
+}
+.relay-cote::before {
+  left: 0;
+}
+.relay-cote::after {
+  right: 0;
+}
+.relay-cote span {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--color-terre);
+  white-space: nowrap;
+}
+@media (max-width: 639px) {
+  .relay-steps {
+    grid-template-columns: 1fr;
+    border-bottom: 0;
+    border-left: 2px solid var(--color-argile);
+  }
+  .relay-steps li,
+  .relay-steps li:first-child {
+    border-left: 0;
+    border-top: 1px solid var(--color-sable);
+    padding: 10px 0 10px 16px;
+  }
+  .relay-steps li:first-child {
+    border-top: 0;
+  }
+  .relay-cote {
+    height: auto;
+    margin: 12px 0 28px;
+    background: none;
+  }
+  .relay-cote::before,
+  .relay-cote::after {
+    display: none;
+  }
+  .relay-cote span {
+    position: static;
+    transform: none;
+  }
+}

@@ -14,7 +14,7 @@ const gains = [
   {
     titre: "Du temps rendu au métier",
     texte:
-      "Les heures gagnées sur la gestion retournent à la production, aux clients, à l'équipe.",
+      "Les heures gagnées sur la gestion retournent à votre métier, à vos clients, à votre équipe.",
   },
   {
     titre: "Moins de dépendance à une mémoire",

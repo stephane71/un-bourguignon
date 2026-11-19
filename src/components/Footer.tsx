@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="bg-brun text-white py-6">
       <Container className="flex flex-col items-start gap-1.5 text-sm leading-relaxed">
         <p className="font-serif text-base font-bold">
-          Gestion sur mesure, par Stéphane Maire
+          Stéphane Maire, ingénieur logiciel
         </p>
         <div className="flex items-center gap-3 mb-1">
           <a
@@ -38,9 +38,14 @@ export function Footer() {
         <a href="mailto:stephane@un-bourguignon.com" className={`${focusClassName} py-1`}>
           stephane@un-bourguignon.com
         </a>
-        <a href="/mentions-legales" className={`${focusClassName} text-white/80 text-xs mt-2 py-1`}>
-          Mentions légales
-        </a>
+        <div className="flex flex-wrap items-center gap-x-4 mt-2">
+          <a href="/gestion-sur-mesure" className={`${focusClassName} text-white/80 text-xs py-1`}>
+            Gestion sur mesure
+          </a>
+          <a href="/mentions-legales" className={`${focusClassName} text-white/80 text-xs py-1`}>
+            Mentions légales
+          </a>
+        </div>
       </Container>
     </footer>
   );

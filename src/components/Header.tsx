@@ -1,15 +1,14 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/MobileMenu";
-
-const NAV_LINKS = [
-  { label: "Pour qui", href: "/#pour-qui" },
-  { label: "Déroulé et prix", href: "/#deroule" },
-  { label: "Un cas réel", href: "/#cas" },
-  { label: "Qui suis-je", href: "/#a-propos" },
-];
+import { navigationFor } from "@/components/navigation";
 
 export function Header() {
+  const { links, cta } = navigationFor(usePathname());
+
   return (
     <header className="sticky top-0 z-50 bg-ecru border-b border-sable">
       <Container className="flex items-center justify-between h-16 lg:h-20">
@@ -23,7 +22,7 @@ export function Header() {
           className="hidden lg:flex items-center gap-8"
           aria-label="Navigation principale"
         >
-          {NAV_LINKS.map((link) => (
+          {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -32,13 +31,13 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <Button as="a" href="/#contact">
-            Premier échange
+          <Button as="a" href={cta.href}>
+            {cta.label}
           </Button>
         </nav>
 
-        {/* Mobile menu -- client component boundary */}
-        <MobileMenu />
+        {/* Mobile menu */}
+        <MobileMenu links={links} cta={cta} />
       </Container>
     </header>
   );

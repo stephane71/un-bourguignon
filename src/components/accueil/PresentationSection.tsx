@@ -22,11 +22,9 @@ const apports = [
   {
     titre: "De bout en bout",
     texte:
-      "J'ai déjà conçu et mis en ligne seul un service complet, de la collecte des données au site public. Chez vous, la même personne écoute, construit et maintient.",
+      "Des données à l'écran, de la mise en ligne à la maintenance : je maîtrise chaque maillon d'une solution. Chez vous, la même personne écoute, construit et maintient.",
   },
 ];
-
-const references = ["SFR", "Thales", "Scaled Risk", "Zeliq", "Wisembly"];
 
 const engagements = [
   {
@@ -99,15 +97,6 @@ export function PresentationSection() {
             </div>
           ))}
         </div>
-
-        <p className="mt-6 text-sm leading-relaxed">
-          <span className="font-bold uppercase tracking-[0.12em] text-xs text-terre mr-3">
-            J&apos;ai travaillé pour
-          </span>
-          <span className="font-serif text-lg font-bold">
-            {references.join(" · ")}
-          </span>
-        </p>
 
         <h2 className="mt-12 text-xs font-bold uppercase tracking-[0.12em] text-terre">
           Mes engagements

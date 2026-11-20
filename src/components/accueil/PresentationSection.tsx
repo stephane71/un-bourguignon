@@ -89,7 +89,7 @@ export function PresentationSection() {
         </h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 md:gap-x-10 border-t border-brun">
           {apports.map((a) => (
-            <div key={a.titre} className="py-5 border-b border-sable min-w-0">
+            <div key={a.titre} className="py-5 min-w-0">
               <h3 className="font-serif text-xl lg:text-2xl font-bold leading-snug">
                 {a.titre}
               </h3>
@@ -101,9 +101,9 @@ export function PresentationSection() {
         <h2 className="mt-12 text-xs font-bold uppercase tracking-[0.12em] text-terre">
           Mes engagements
         </h2>
-        <dl className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <dl className="mt-4 grid grid-cols-1 md:grid-cols-3 md:gap-x-10 border-t border-brun">
           {engagements.map((e) => (
-            <div key={e.titre} className="border-t border-sable pt-4">
+            <div key={e.titre} className="py-5 min-w-0">
               <dt className="font-serif text-lg font-bold">{e.titre}</dt>
               <dd className="mt-1 text-base leading-relaxed">{e.texte}</dd>
             </div>
